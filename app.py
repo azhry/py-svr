@@ -9,7 +9,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from sklearn.svm import SVR
 from pandas import DataFrame, concat
-from sklearn.metrics import mean_squared_error
+from sklearn.metrics import mean_squared_error, mean_absolute_error
 from math import sqrt
 import pandas as pd, numpy as np, matplotlib.pyplot as plt
 
@@ -77,16 +77,18 @@ class Ui_MainWindow(object):
         self.groupBox.setTitle("")
         self.groupBox.setObjectName("groupBox")
         self.tableWidget_2 = QtWidgets.QTableWidget(self.groupBox)
-        self.tableWidget_2.setGeometry(QtCore.QRect(10, 10, 141, 121))
+        self.tableWidget_2.setGeometry(QtCore.QRect(10, 10, 141, 151))
         self.tableWidget_2.setObjectName("tableWidget_2")
         self.tableWidget_2.setColumnCount(1)
-        self.tableWidget_2.setRowCount(3)
+        self.tableWidget_2.setRowCount(4)
         item = QtWidgets.QTableWidgetItem()
         self.tableWidget_2.setVerticalHeaderItem(0, item)
         item = QtWidgets.QTableWidgetItem()
         self.tableWidget_2.setVerticalHeaderItem(1, item)
         item = QtWidgets.QTableWidgetItem()
         self.tableWidget_2.setVerticalHeaderItem(2, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_2.setVerticalHeaderItem(3, item)
         item = QtWidgets.QTableWidgetItem()
         self.tableWidget_2.setHorizontalHeaderItem(0, item)
         self.groupBox_2 = QtWidgets.QGroupBox(self.groupBox)
@@ -142,6 +144,8 @@ class Ui_MainWindow(object):
         item = self.tableWidget_2.verticalHeaderItem(1)
         item.setText(_translate("MainWindow", "MSE"))
         item = self.tableWidget_2.verticalHeaderItem(2)
+        item.setText(_translate("MainWindow", "MAE"))
+        item = self.tableWidget_2.verticalHeaderItem(3)
         item.setText(_translate("MainWindow", "RMSE"))
         item = self.tableWidget_2.horizontalHeaderItem(0)
         item.setText(_translate("MainWindow", "Value"))
@@ -213,6 +217,7 @@ class Ui_MainWindow(object):
             ypred = regressor.predict(xtest)
             score = regressor.score(xtest, ytest)
             mse = mean_squared_error(ytest, ypred)
+            mae = mean_absolute_error(ytest, ypred)
             rmse = sqrt(mse)
             
             item = QtWidgets.QTableWidgetItem()
@@ -228,6 +233,11 @@ class Ui_MainWindow(object):
             item = QtWidgets.QTableWidgetItem()
             self.tableWidget_2.setItem(2, 0, item)
             item = self.tableWidget_2.item(2, 0)
+            item.setText(str(mae))
+
+            item = QtWidgets.QTableWidgetItem()
+            self.tableWidget_2.setItem(3, 0, item)
+            item = self.tableWidget_2.item(3, 0)
             item.setText(str(rmse))
 
             f, ax = plt.subplots()
