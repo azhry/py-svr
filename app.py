@@ -13,10 +13,43 @@ from sklearn.metrics import mean_squared_error, mean_absolute_error
 from math import sqrt
 import pandas as pd, numpy as np, matplotlib.pyplot as plt
 
+# def series_to_supervised(data, n_in=1, n_out=1, dropnan=True):
+#     """
+#     See: https://machinelearningmastery.com/convert-time-series-supervised-learning-problem-python/
+
+#     Frame a time series as a supervised learning dataset.
+#     Arguments:
+#         data: Sequence of observations as a list or NumPy array.
+#         n_in: Number of lag observations as input (X).
+#         n_out: Number of observations as output (y).
+#         dropnan: Boolean whether or not to drop rows with NaN values.
+#     Returns:
+#         Pandas DataFrame of series framed for supervised learning.
+#     """
+#     n_vars = 1 if type(data) is list else data.shape[1]
+#     df = DataFrame(data)
+#     cols, names = list(), list()
+#     # input sequence (t-n, ... t-1)
+#     for i in range(n_in, 0, -1):
+#         cols.append(df.shift(i))
+#         names += [('var%d(t-%d)' % (j+1, i)) for j in range(n_vars)]
+#     # forecast sequence (t, t+1, ... t+n)
+#     for i in range(0, n_out):
+#         cols.append(df.shift(-i))
+#         if i == 0:
+#             names += [('var%d(t)' % (j+1)) for j in range(n_vars)]
+#         else:
+#             names += [('var%d(t+%d)' % (j+1, i)) for j in range(n_vars)]
+#     # put it all together
+#     agg = concat(cols, axis=1)
+#     agg.columns = names
+#     # drop rows with NaN values
+#     if dropnan:
+#         agg.dropna(inplace=True)
+#     return agg
+
 def series_to_supervised(data, n_in=1, n_out=1, dropnan=True):
     """
-    See: https://machinelearningmastery.com/convert-time-series-supervised-learning-problem-python/
-
     Frame a time series as a supervised learning dataset.
     Arguments:
         data: Sequence of observations as a list or NumPy array.
@@ -139,6 +172,8 @@ class Ui_MainWindow(object):
         item.setText(_translate("MainWindow", "Time"))
         item = self.tableWidget.horizontalHeaderItem(1)
         item.setText(_translate("MainWindow", "Data"))
+        item = self.tableWidget.horizontalHeaderItem(2)
+        item.setText(_translate("MainWindow", "SDM"))
         item = self.tableWidget_2.verticalHeaderItem(0)
         item.setText(_translate("MainWindow", "Score"))
         item = self.tableWidget_2.verticalHeaderItem(1)
@@ -168,7 +203,7 @@ class Ui_MainWindow(object):
             self.train = pd.read_excel(fileName, sheet_name='Training Data')
             self.test = pd.read_excel(fileName, sheet_name='Testing Data')
             self.tableWidget.setRowCount(len(self.train) + len(self.test) + 1)
-            for i, (time, data) in enumerate(zip(self.train['Time'], self.train['Data'])):
+            for i, (time, data, sdm) in enumerate(zip(self.train['Time'], self.train['Data'], self.train['Data2'])):
                 item = QtWidgets.QTableWidgetItem()
                 self.tableWidget.setItem(i, 0, item)
                 item = self.tableWidget.item(i, 0)
@@ -179,8 +214,13 @@ class Ui_MainWindow(object):
                 item = self.tableWidget.item(i, 1)
                 item.setText(str(data))
 
+                item = QtWidgets.QTableWidgetItem()
+                self.tableWidget.setItem(i, 2, item)
+                item = self.tableWidget.item(i, 2)
+                item.setText(str(sdm))
+
             train_len = len(self.train)
-            for i, (time, data) in enumerate(zip(self.test['Time'], self.test['Data'])):
+            for i, (time, data, sdm) in enumerate(zip(self.test['Time'], self.test['Data'], self.test['Data2'])):
                 item = QtWidgets.QTableWidgetItem()
                 self.tableWidget.setItem(i + train_len, 0, item)
                 item = self.tableWidget.item(i + train_len, 0)
@@ -190,6 +230,11 @@ class Ui_MainWindow(object):
                 self.tableWidget.setItem(i + train_len, 1, item)
                 item = self.tableWidget.item(i + train_len, 1)
                 item.setText(str(data))
+
+                item = QtWidgets.QTableWidgetItem()
+                self.tableWidget.setItem(i + train_len, 2, item)
+                item = self.tableWidget.item(i + train_len, 2)
+                item.setText(str(sdm))
 
             self.data = pd.concat([self.train, self.test])
             plt.plot(self.data['Time'].values, self.data['Data'].values)
@@ -203,14 +248,19 @@ class Ui_MainWindow(object):
     def do_test(self, MainWindow):
         if self.train is not None and self.test is not None:
             steps = 6
+            train = DataFrame()
+            train['Data2'] = list(self.train['Data2'].values)
+            train['Data'] = list(self.train['Data'].values)
+            df = series_to_supervised(train.values, steps)
+            x = df.iloc[:, [a for a in range(steps * 2 - 2)]].values
+            y = df.iloc[:, [steps * 2 - 1]].values.ravel()
 
-            df = series_to_supervised(list(self.train['Data'].values), steps)
-            x = df.iloc[:, [a for a in range(steps - 2)]].values
-            y = df.iloc[:, [steps - 1]].values.ravel()
-
-            df = series_to_supervised(list(self.test['Data'].values), steps)
-            xtest = df.iloc[:, [a for a in range(steps - 2)]].values
-            ytest = df.iloc[:, [steps - 1]].values.ravel()
+            test = DataFrame()
+            test['Data2'] = list(self.test['Data2'].values)
+            test['Data'] = list(self.test['Data'].values)
+            df = series_to_supervised(test.values, steps)
+            xtest = df.iloc[:, [a for a in range(steps * 2 - 2)]].values
+            ytest = df.iloc[:, [steps * 2 - 1]].values.ravel()
 
             regressor = SVR(kernel='linear', epsilon=1.0)
             regressor.fit(x, y)
