@@ -11,6 +11,7 @@ from sklearn.svm import SVR
 from pandas import DataFrame, concat
 from sklearn.metrics import mean_squared_error, mean_absolute_error
 from math import sqrt
+from datetime import datetime
 import pandas as pd, numpy as np, matplotlib.pyplot as plt
 
 # def series_to_supervised(data, n_in=1, n_out=1, dropnan=True):
@@ -127,15 +128,16 @@ class Ui_MainWindow(object):
         self.groupBox_2 = QtWidgets.QGroupBox(self.groupBox)
         self.groupBox_2.setGeometry(QtCore.QRect(170, 100, 261, 131))
         self.groupBox_2.setObjectName("groupBox_2")
-        # self.dateEdit = QtWidgets.QDateEdit(self.groupBox_2)
-        # self.dateEdit.setGeometry(QtCore.QRect(140, 60, 110, 22))
-        # self.dateEdit.setObjectName("dateEdit")
-        # self.pushButton_2 = QtWidgets.QPushButton(self.groupBox_2)
-        # self.pushButton_2.setGeometry(QtCore.QRect(170, 90, 75, 23))
-        # self.pushButton_2.setObjectName("pushButton_2")
-        # self.label_2 = QtWidgets.QLabel(self.groupBox_2)
-        # self.label_2.setGeometry(QtCore.QRect(20, 30, 221, 16))
-        # self.label_2.setObjectName("label_2")
+        self.dateEdit = QtWidgets.QDateEdit(QtCore.QDate(2019, 2, 1), self.groupBox_2)
+        self.dateEdit.setGeometry(QtCore.QRect(140, 60, 110, 22))
+        self.dateEdit.setObjectName("dateEdit")
+        self.dateEdit.setDisplayFormat('MMMM yy')
+        self.pushButton_2 = QtWidgets.QPushButton(self.groupBox_2)
+        self.pushButton_2.setGeometry(QtCore.QRect(170, 90, 75, 23))
+        self.pushButton_2.setObjectName("pushButton_2")
+        self.label_2 = QtWidgets.QLabel(self.groupBox_2)
+        self.label_2.setGeometry(QtCore.QRect(20, 30, 221, 16))
+        self.label_2.setObjectName("label_2")
         self.groupBox_3 = QtWidgets.QGroupBox(self.groupBox)
         self.groupBox_3.setGeometry(QtCore.QRect(170, 10, 261, 80))
         self.groupBox_3.setObjectName("groupBox_3")
@@ -184,10 +186,10 @@ class Ui_MainWindow(object):
         item.setText(_translate("MainWindow", "RMSE"))
         item = self.tableWidget_2.horizontalHeaderItem(0)
         item.setText(_translate("MainWindow", "Value"))
-        # self.groupBox_2.setTitle(_translate("MainWindow", "Make Prediction"))
-        # self.pushButton_2.setText(_translate("MainWindow", "Predict"))
-        # self.pushButton_2.clicked.connect(self.make_prediction)
-        # self.label_2.setText(_translate("MainWindow", "Choose the end date you want to predict"))
+        self.groupBox_2.setTitle(_translate("MainWindow", "Make Prediction"))
+        self.pushButton_2.setText(_translate("MainWindow", "Predict"))
+        self.pushButton_2.clicked.connect(self.make_prediction)
+        self.label_2.setText(_translate("MainWindow", "Choose the end date you want to predict"))
         self.groupBox_3.setTitle(_translate("MainWindow", "Test Model"))
         self.pushButton.setText(_translate("MainWindow", "Do Test"))
         self.pushButton.clicked.connect(lambda: self.do_test(MainWindow))
@@ -269,7 +271,12 @@ class Ui_MainWindow(object):
             mse = mean_squared_error(ytest, ypred)
             mae = mean_absolute_error(ytest, ypred)
             rmse = sqrt(mse)
-            
+            print("SVR Kernel Linear")
+            print(f"Score: {score}")
+            print(f"MSE: {mse}")
+            print(f"MAE: {mae}")
+            print(f"RMSE: {rmse}\n")
+
             item = QtWidgets.QTableWidgetItem()
             self.tableWidget_2.setItem(0, 0, item)
             item = self.tableWidget_2.item(0, 0)
@@ -290,6 +297,61 @@ class Ui_MainWindow(object):
             item = self.tableWidget_2.item(3, 0)
             item.setText(str(rmse))
 
+
+            regressor = SVR(kernel='rbf', epsilon=1.0)
+            regressor.fit(x, y)
+            ypred = regressor.predict(xtest)
+            score = regressor.score(xtest, ytest)
+            mse = mean_squared_error(ytest, ypred)
+            mae = mean_absolute_error(ytest, ypred)
+            rmse = sqrt(mse)
+            print("SVR Kernel RBF")
+            print(f"Score: {score}")
+            print(f"MSE: {mse}")
+            print(f"MAE: {mae}")
+            print(f"RMSE: {rmse}\n")
+
+            from sklearn import linear_model
+            reg = linear_model.Lasso(alpha=0.1)
+            reg.fit(x, y)
+            ypred = reg.predict(xtest)
+            score = reg.score(xtest, ytest)
+            mse = mean_squared_error(ytest, ypred)
+            mae = mean_absolute_error(ytest, ypred)
+            rmse = sqrt(mse)
+            print("Linear Model - Lasso")
+            print(f"Score: {score}")
+            print(f"MSE: {mse}")
+            print(f"MAE: {mae}")
+            print(f"RMSE: {rmse}\n")
+
+            reg = linear_model.ElasticNet(alpha=0.1)
+            reg.fit(x, y)
+            ypred = reg.predict(xtest)
+            score = reg.score(xtest, ytest)
+            mse = mean_squared_error(ytest, ypred)
+            mae = mean_absolute_error(ytest, ypred)
+            rmse = sqrt(mse)
+            print("Linear Model - Elastic Net")
+            print(f"Score: {score}")
+            print(f"MSE: {mse}")
+            print(f"MAE: {mae}")
+            print(f"RMSE: {rmse}\n")
+
+            reg = linear_model.Ridge(alpha=0.1)
+            reg.fit(x, y)
+            ypred = reg.predict(xtest)
+            score = reg.score(xtest, ytest)
+            mse = mean_squared_error(ytest, ypred)
+            mae = mean_absolute_error(ytest, ypred)
+            rmse = sqrt(mse)
+            print("Linear Model - Ridge")
+            print(f"Score: {score}")
+            print(f"MSE: {mse}")
+            print(f"MAE: {mae}")
+            print(f"RMSE: {rmse}\n")
+
+
             f, ax = plt.subplots()
             actual = ax.plot(self.data['Time'].values, self.data['Data'].values, color='blue', label='Actual')
             ttest = self.test[:-steps]
@@ -309,7 +371,45 @@ class Ui_MainWindow(object):
             MainWindow.msg.show()
 
     def make_prediction(self):
-        print('Make prediction')
+        if self.train is not None and self.test is not None:
+            steps = 6
+            train = DataFrame()
+            train['Data2'] = list(self.train['Data2'].values)
+            train['Data'] = list(self.train['Data'].values)
+            df = series_to_supervised(train.values, steps)
+            x = df.iloc[:, [a for a in range(steps * 2 - 2)]].values
+            y = df.iloc[:, [steps * 2 - 1]].values.ravel()
+
+            start_year = 2019
+            start_month = 2
+            start_date = QtCore.QDate(start_year, start_month, 1);
+            end_date = self.dateEdit.date()
+            diff = start_date.daysTo(end_date)
+            forecast_time = np.array([])
+            forecast_data = np.empty((0, steps * 2 - 2), int)
+            old_forecast = x[50:]
+            x_len = len(old_forecast)
+            diff_month = diff // 30
+            for i in range(diff_month):
+                forecast_data = np.append(forecast_data, np.array([old_forecast[i % x_len]]), axis = 0)
+                forecast_time = np.append(forecast_time, f'{start_year}-{start_month}')
+                if start_month == 12:
+                    start_year = start_year + 1
+                start_month = start_month + 1
+
+            regressor = SVR(kernel='linear', epsilon=1.0)
+            regressor.fit(x, y)
+            ypred = regressor.predict(forecast_data)
+
+            f, ax = plt.subplots()
+            actual = ax.plot(self.data['Time'].values, self.data['Data'].values, color='blue', label='Actual')
+            predicted = ax.plot(forecast_time, ypred, color='red', label='Forecast')
+            ax.legend()
+            plt.savefig('Plot.png')
+
+            pic = QtGui.QPixmap('Plot.png')
+            pic = pic.scaled(511, 341)
+            self.graphicsView.setPixmap(pic)
 
 if __name__ == "__main__":
    import sys
