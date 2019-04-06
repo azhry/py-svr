@@ -204,7 +204,7 @@ class Ui_MainWindow(object):
         if (fileName):
             self.train = pd.read_excel(fileName, sheet_name='Training Data')
             self.test = pd.read_excel(fileName, sheet_name='Testing Data')
-            self.tableWidget.setRowCount(len(self.train) + len(self.test) + 1)
+            self.tableWidget.setRowCount(len(self.train) + len(self.test))
             for i, (time, data, sdm) in enumerate(zip(self.train['Time'], self.train['Data'], self.train['Data2'])):
                 item = QtWidgets.QTableWidgetItem()
                 self.tableWidget.setItem(i, 0, item)
@@ -261,6 +261,7 @@ class Ui_MainWindow(object):
             test['Data2'] = list(self.test['Data2'].values)
             test['Data'] = list(self.test['Data'].values)
             df = series_to_supervised(test.values, steps)
+            dft = series_to_supervised(list(self.test['Time'].values), steps)
             xtest = df.iloc[:, [a for a in range(steps * 2 - 2)]].values
             ytest = df.iloc[:, [steps * 2 - 1]].values.ravel()
 
@@ -296,7 +297,6 @@ class Ui_MainWindow(object):
             self.tableWidget_2.setItem(3, 0, item)
             item = self.tableWidget_2.item(3, 0)
             item.setText(str(rmse))
-
 
             regressor = SVR(kernel='rbf', epsilon=1.0)
             regressor.fit(x, y)
@@ -351,11 +351,10 @@ class Ui_MainWindow(object):
             print(f"MAE: {mae}")
             print(f"RMSE: {rmse}\n")
 
-
             f, ax = plt.subplots()
             actual = ax.plot(self.data['Time'].values, self.data['Data'].values, color='blue', label='Actual')
-            ttest = self.test[:-steps]
-            predicted = ax.plot(ttest['Time'], ypred, color='red', label='Predicted')
+            ttest = dft['var1(t)'].values
+            predicted = ax.plot(ttest, ypred, color='red', label='Predicted')
             ax.legend()
             plt.savefig('Plot.png')
 
@@ -381,35 +380,68 @@ class Ui_MainWindow(object):
             y = df.iloc[:, [steps * 2 - 1]].values.ravel()
 
             start_year = 2019
-            start_month = 2
+            start_month = 1
             start_date = QtCore.QDate(start_year, start_month, 1);
             end_date = self.dateEdit.date()
-            diff = start_date.daysTo(end_date)
+            diff_year = end_date.year() - start_date.year()
+            end_month = end_date.month() + 1
+            if diff_year == 0:
+                diff_month = end_month - start_month                
+            else:
+                diff_month = 12 - start_month + ((12 * diff_year) - (12 - end_month))
+
+
+            # diff = start_date.daysTo(end_date)
+            sdm_data = np.array([])
             forecast_time = np.array([])
             forecast_data = np.empty((0, steps * 2 - 2), int)
-            old_forecast = x[50:]
+            old_forecast = x
             x_len = len(old_forecast)
-            diff_month = diff // 30
-            for i in range(diff_month):
-                forecast_data = np.append(forecast_data, np.array([old_forecast[i % x_len]]), axis = 0)
-                forecast_time = np.append(forecast_time, f'{start_year}-{start_month}')
-                if start_month == 12:
-                    start_year = start_year + 1
-                start_month = start_month + 1
+            # diff_month = (diff // 30) + 1
 
-            regressor = SVR(kernel='linear', epsilon=1.0)
-            regressor.fit(x, y)
-            ypred = regressor.predict(forecast_data)
+            total_records = len(self.train) + len(self.test)
 
-            f, ax = plt.subplots()
-            actual = ax.plot(self.data['Time'].values, self.data['Data'].values, color='blue', label='Actual')
-            predicted = ax.plot(forecast_time, ypred, color='red', label='Forecast')
-            ax.legend()
-            plt.savefig('Plot.png')
+            if diff_month > 0:
+                for i in range(diff_month):
+                    sdm_data = np.append(sdm_data, old_forecast[i % x_len][-2])
+                    forecast_data = np.append(forecast_data, np.array([old_forecast[i % x_len]]), axis = 0)
+                    forecast_time = np.append(forecast_time, f'{start_year}-{start_month}')
+                    if start_month == 12:
+                        start_year = start_year + 1
+                        start_month = 1
+                    else:
+                        start_month = start_month + 1
 
-            pic = QtGui.QPixmap('Plot.png')
-            pic = pic.scaled(511, 341)
-            self.graphicsView.setPixmap(pic)
+                regressor = SVR(kernel='linear', epsilon=1.0)
+                regressor.fit(x, y)
+                ypred = regressor.predict(forecast_data)
+
+                f, ax = plt.subplots()
+                actual = ax.plot(self.data['Time'].values, self.data['Data'].values, color='blue', label='Actual')
+                predicted = ax.plot(forecast_time, ypred, color='red', label='Forecast')
+                ax.legend()
+                plt.savefig('Plot.png')
+
+                pic = QtGui.QPixmap('Plot.png')
+                pic = pic.scaled(511, 341)
+                self.graphicsView.setPixmap(pic)
+
+                self.tableWidget.setRowCount(len(self.train) + len(self.test) + len(ypred))
+                for i, (time, predicted, sdm) in enumerate(zip(forecast_time, ypred, sdm_data)):
+                    item = QtWidgets.QTableWidgetItem()
+                    self.tableWidget.setItem(i + total_records, 0, item)
+                    item = self.tableWidget.item(i + total_records, 0)
+                    item.setText(str(time))
+
+                    item = QtWidgets.QTableWidgetItem()
+                    self.tableWidget.setItem(i + total_records, 1, item)
+                    item = self.tableWidget.item(i + total_records, 1)
+                    item.setText(str(int(predicted)))
+
+                    item = QtWidgets.QTableWidgetItem()
+                    self.tableWidget.setItem(i + total_records, 2, item)
+                    item = self.tableWidget.item(i + total_records, 2)
+                    item.setText(str(int(sdm)))  
 
 if __name__ == "__main__":
    import sys
