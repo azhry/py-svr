@@ -278,6 +278,17 @@ class Ui_MainWindow(object):
             print(f"MAE: {mae}")
             print(f"RMSE: {rmse}\n")
 
+            f, ax = plt.subplots()
+            actual = ax.plot(self.data['Time'].values, self.data['Data'].values, color='blue', label='Actual')
+            ttest = dft['var1(t)'].values
+            predicted = ax.plot(ttest, ypred, color='red', label='Predicted')
+            ax.legend()
+            plt.savefig('Plot.png')
+
+            pic = QtGui.QPixmap('Plot.png')
+            pic = pic.scaled(511, 341)
+            self.graphicsView.setPixmap(pic)
+
             item = QtWidgets.QTableWidgetItem()
             self.tableWidget_2.setItem(0, 0, item)
             item = self.tableWidget_2.item(0, 0)
@@ -351,16 +362,33 @@ class Ui_MainWindow(object):
             print(f"MAE: {mae}")
             print(f"RMSE: {rmse}\n")
 
-            f, ax = plt.subplots()
-            actual = ax.plot(self.data['Time'].values, self.data['Data'].values, color='blue', label='Actual')
-            ttest = dft['var1(t)'].values
-            predicted = ax.plot(ttest, ypred, color='red', label='Predicted')
-            ax.legend()
-            plt.savefig('Plot.png')
+            from sklearn.neural_network import MLPRegressor
+            # from sklearn.preprocessing import StandardScaler
 
-            pic = QtGui.QPixmap('Plot.png')
-            pic = pic.scaled(511, 341)
-            self.graphicsView.setPixmap(pic)
+            # scaler = StandardScaler()
+            # scaler.fit(x)
+            # x_scaled = scaler.transform(x)
+            # xtest_scaled = scaler.transform(xtest)
+
+            hidden = 5
+            reg = MLPRegressor(hidden_layer_sizes=(5, ), activation='logistic', solver='lbfgs', alpha=0.0001,random_state=0)
+            reg.fit(x, y)
+            ypred = reg.predict(xtest)
+            score = reg.score(xtest, ytest)
+            mse = mean_squared_error(ytest, ypred)
+            mae = mean_absolute_error(ytest, ypred)
+            rmse = sqrt(mse)
+            print("Neural Network - Backpropagation")
+            print(reg)
+            print(f"Input: {x.shape[1]}")
+            print(f"Hidden: {hidden}")
+            print(f"Output: {reg.n_outputs_}")
+            print(f"Score: {score}")
+            print(f"MSE: {mse}")
+            print(f"MAE: {mae}")
+            print(f"RMSE: {rmse}\n")
+
+            
         else:
             MainWindow.msg = QtWidgets.QMessageBox()
             MainWindow.msg.setIcon(QtWidgets.QMessageBox.Warning)
