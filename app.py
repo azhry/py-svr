@@ -89,7 +89,7 @@ class Ui_MainWindow(object):
 
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(800, 600)
+        MainWindow.resize(1100, 600)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.tableWidget = QtWidgets.QTableWidget(self.centralwidget)
@@ -104,16 +104,16 @@ class Ui_MainWindow(object):
         item = QtWidgets.QTableWidgetItem()
         self.tableWidget.setHorizontalHeaderItem(2, item)
         self.graphicsView = QtWidgets.QLabel(self.centralwidget)
-        self.graphicsView.setGeometry(QtCore.QRect(330, 0, 461, 291))
+        self.graphicsView.setGeometry(QtCore.QRect(330, 0, 761, 291))
         self.graphicsView.setObjectName("graphicsView")
         self.groupBox = QtWidgets.QGroupBox(self.centralwidget)
-        self.groupBox.setGeometry(QtCore.QRect(330, 300, 451, 251))
+        self.groupBox.setGeometry(QtCore.QRect(330, 300, 751, 251))
         self.groupBox.setTitle("")
         self.groupBox.setObjectName("groupBox")
         self.tableWidget_2 = QtWidgets.QTableWidget(self.groupBox)
-        self.tableWidget_2.setGeometry(QtCore.QRect(10, 10, 141, 151))
+        self.tableWidget_2.setGeometry(QtCore.QRect(10, 10, 441, 171))
         self.tableWidget_2.setObjectName("tableWidget_2")
-        self.tableWidget_2.setColumnCount(1)
+        self.tableWidget_2.setColumnCount(6)
         self.tableWidget_2.setRowCount(4)
         item = QtWidgets.QTableWidgetItem()
         self.tableWidget_2.setVerticalHeaderItem(0, item)
@@ -125,8 +125,18 @@ class Ui_MainWindow(object):
         self.tableWidget_2.setVerticalHeaderItem(3, item)
         item = QtWidgets.QTableWidgetItem()
         self.tableWidget_2.setHorizontalHeaderItem(0, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_2.setHorizontalHeaderItem(1, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_2.setHorizontalHeaderItem(2, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_2.setHorizontalHeaderItem(3, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_2.setHorizontalHeaderItem(4, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_2.setHorizontalHeaderItem(5, item)
         self.groupBox_2 = QtWidgets.QGroupBox(self.groupBox)
-        self.groupBox_2.setGeometry(QtCore.QRect(170, 100, 261, 131))
+        self.groupBox_2.setGeometry(QtCore.QRect(470, 100, 261, 131))
         self.groupBox_2.setObjectName("groupBox_2")
         self.dateEdit = QtWidgets.QDateEdit(QtCore.QDate(2019, 2, 1), self.groupBox_2)
         self.dateEdit.setGeometry(QtCore.QRect(140, 60, 110, 22))
@@ -139,7 +149,7 @@ class Ui_MainWindow(object):
         self.label_2.setGeometry(QtCore.QRect(20, 30, 221, 16))
         self.label_2.setObjectName("label_2")
         self.groupBox_3 = QtWidgets.QGroupBox(self.groupBox)
-        self.groupBox_3.setGeometry(QtCore.QRect(170, 10, 261, 80))
+        self.groupBox_3.setGeometry(QtCore.QRect(470, 10, 261, 80))
         self.groupBox_3.setObjectName("groupBox_3")
         self.pushButton = QtWidgets.QPushButton(self.groupBox_3)
         self.pushButton.setGeometry(QtCore.QRect(180, 50, 75, 23))
@@ -185,7 +195,17 @@ class Ui_MainWindow(object):
         item = self.tableWidget_2.verticalHeaderItem(3)
         item.setText(_translate("MainWindow", "RMSE"))
         item = self.tableWidget_2.horizontalHeaderItem(0)
-        item.setText(_translate("MainWindow", "Value"))
+        item.setText(_translate("MainWindow", "SVR (linear)"))
+        item = self.tableWidget_2.horizontalHeaderItem(1)
+        item.setText(_translate("MainWindow", "SVR (rbf)"))
+        item = self.tableWidget_2.horizontalHeaderItem(2)
+        item.setText(_translate("MainWindow", "Lasso"))
+        item = self.tableWidget_2.horizontalHeaderItem(3)
+        item.setText(_translate("MainWindow", "Elastic Net"))
+        item = self.tableWidget_2.horizontalHeaderItem(4)
+        item.setText(_translate("MainWindow", "Ridge"))
+        item = self.tableWidget_2.horizontalHeaderItem(5)
+        item.setText(_translate("MainWindow", "MLP"))
         self.groupBox_2.setTitle(_translate("MainWindow", "Make Prediction"))
         self.pushButton_2.setText(_translate("MainWindow", "Predict"))
         self.pushButton_2.clicked.connect(self.make_prediction)
@@ -243,7 +263,7 @@ class Ui_MainWindow(object):
             plt.savefig('Plot.png')
 
             pic = QtGui.QPixmap('Plot.png')
-            pic = pic.scaled(511, 341)
+            pic = pic.scaled(811, 341)
             self.graphicsView.setPixmap(pic)
 
 
@@ -286,7 +306,7 @@ class Ui_MainWindow(object):
             plt.savefig('Plot.png')
 
             pic = QtGui.QPixmap('Plot.png')
-            pic = pic.scaled(511, 341)
+            pic = pic.scaled(811, 341)
             self.graphicsView.setPixmap(pic)
 
             item = QtWidgets.QTableWidgetItem()
@@ -322,6 +342,26 @@ class Ui_MainWindow(object):
             print(f"MAE: {mae}")
             print(f"RMSE: {rmse}\n")
 
+            item = QtWidgets.QTableWidgetItem()
+            self.tableWidget_2.setItem(0, 1, item)
+            item = self.tableWidget_2.item(0, 1)
+            item.setText(str(score))
+
+            item = QtWidgets.QTableWidgetItem()
+            self.tableWidget_2.setItem(1, 1, item)
+            item = self.tableWidget_2.item(1, 1)
+            item.setText(str(mse))
+
+            item = QtWidgets.QTableWidgetItem()
+            self.tableWidget_2.setItem(2, 1, item)
+            item = self.tableWidget_2.item(2, 1)
+            item.setText(str(mae))
+
+            item = QtWidgets.QTableWidgetItem()
+            self.tableWidget_2.setItem(3, 1, item)
+            item = self.tableWidget_2.item(3, 1)
+            item.setText(str(rmse))
+
             from sklearn import linear_model
             reg = linear_model.Lasso(alpha=0.1)
             reg.fit(x, y)
@@ -336,6 +376,26 @@ class Ui_MainWindow(object):
             print(f"MAE: {mae}")
             print(f"RMSE: {rmse}\n")
 
+            item = QtWidgets.QTableWidgetItem()
+            self.tableWidget_2.setItem(0, 2, item)
+            item = self.tableWidget_2.item(0, 2)
+            item.setText(str(score))
+
+            item = QtWidgets.QTableWidgetItem()
+            self.tableWidget_2.setItem(1, 2, item)
+            item = self.tableWidget_2.item(1, 2)
+            item.setText(str(mse))
+
+            item = QtWidgets.QTableWidgetItem()
+            self.tableWidget_2.setItem(2, 2, item)
+            item = self.tableWidget_2.item(2, 2)
+            item.setText(str(mae))
+
+            item = QtWidgets.QTableWidgetItem()
+            self.tableWidget_2.setItem(3, 2, item)
+            item = self.tableWidget_2.item(3, 2)
+            item.setText(str(rmse))
+
             reg = linear_model.ElasticNet(alpha=0.1)
             reg.fit(x, y)
             ypred = reg.predict(xtest)
@@ -349,6 +409,26 @@ class Ui_MainWindow(object):
             print(f"MAE: {mae}")
             print(f"RMSE: {rmse}\n")
 
+            item = QtWidgets.QTableWidgetItem()
+            self.tableWidget_2.setItem(0, 3, item)
+            item = self.tableWidget_2.item(0, 3)
+            item.setText(str(score))
+
+            item = QtWidgets.QTableWidgetItem()
+            self.tableWidget_2.setItem(1, 3, item)
+            item = self.tableWidget_2.item(1, 3)
+            item.setText(str(mse))
+
+            item = QtWidgets.QTableWidgetItem()
+            self.tableWidget_2.setItem(2, 3, item)
+            item = self.tableWidget_2.item(2, 3)
+            item.setText(str(mae))
+
+            item = QtWidgets.QTableWidgetItem()
+            self.tableWidget_2.setItem(3, 3, item)
+            item = self.tableWidget_2.item(3, 3)
+            item.setText(str(rmse))
+
             reg = linear_model.Ridge(alpha=0.1)
             reg.fit(x, y)
             ypred = reg.predict(xtest)
@@ -361,6 +441,26 @@ class Ui_MainWindow(object):
             print(f"MSE: {mse}")
             print(f"MAE: {mae}")
             print(f"RMSE: {rmse}\n")
+
+            item = QtWidgets.QTableWidgetItem()
+            self.tableWidget_2.setItem(0, 4, item)
+            item = self.tableWidget_2.item(0, 4)
+            item.setText(str(score))
+
+            item = QtWidgets.QTableWidgetItem()
+            self.tableWidget_2.setItem(1, 4, item)
+            item = self.tableWidget_2.item(1, 4)
+            item.setText(str(mse))
+
+            item = QtWidgets.QTableWidgetItem()
+            self.tableWidget_2.setItem(2, 4, item)
+            item = self.tableWidget_2.item(2, 4)
+            item.setText(str(mae))
+
+            item = QtWidgets.QTableWidgetItem()
+            self.tableWidget_2.setItem(3, 4, item)
+            item = self.tableWidget_2.item(3, 4)
+            item.setText(str(rmse))
 
             from sklearn.neural_network import MLPRegressor
             # from sklearn.preprocessing import StandardScaler
@@ -387,6 +487,26 @@ class Ui_MainWindow(object):
             print(f"MSE: {mse}")
             print(f"MAE: {mae}")
             print(f"RMSE: {rmse}\n")
+
+            item = QtWidgets.QTableWidgetItem()
+            self.tableWidget_2.setItem(0, 5, item)
+            item = self.tableWidget_2.item(0, 5)
+            item.setText(str(score))
+
+            item = QtWidgets.QTableWidgetItem()
+            self.tableWidget_2.setItem(1, 5, item)
+            item = self.tableWidget_2.item(1, 5)
+            item.setText(str(mse))
+
+            item = QtWidgets.QTableWidgetItem()
+            self.tableWidget_2.setItem(2, 5, item)
+            item = self.tableWidget_2.item(2, 5)
+            item.setText(str(mae))
+
+            item = QtWidgets.QTableWidgetItem()
+            self.tableWidget_2.setItem(3, 5, item)
+            item = self.tableWidget_2.item(3, 5)
+            item.setText(str(rmse))
 
             
         else:
