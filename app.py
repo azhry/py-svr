@@ -89,11 +89,11 @@ class Ui_MainWindow(object):
 
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1100, 600)
+        MainWindow.resize(1100, 750)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.tableWidget = QtWidgets.QTableWidget(self.centralwidget)
-        self.tableWidget.setGeometry(QtCore.QRect(10, 0, 311, 551))
+        self.tableWidget.setGeometry(QtCore.QRect(10, 0, 311, 701))
         self.tableWidget.setObjectName("tableWidget")
         self.tableWidget.setColumnCount(3)
         self.tableWidget.setRowCount(0)
@@ -104,10 +104,10 @@ class Ui_MainWindow(object):
         item = QtWidgets.QTableWidgetItem()
         self.tableWidget.setHorizontalHeaderItem(2, item)
         self.graphicsView = QtWidgets.QLabel(self.centralwidget)
-        self.graphicsView.setGeometry(QtCore.QRect(330, 0, 761, 291))
+        self.graphicsView.setGeometry(QtCore.QRect(330, 0, 761, 441))
         self.graphicsView.setObjectName("graphicsView")
         self.groupBox = QtWidgets.QGroupBox(self.centralwidget)
-        self.groupBox.setGeometry(QtCore.QRect(330, 300, 751, 251))
+        self.groupBox.setGeometry(QtCore.QRect(330, 450, 751, 251))
         self.groupBox.setTitle("")
         self.groupBox.setObjectName("groupBox")
         self.tableWidget_2 = QtWidgets.QTableWidget(self.groupBox)
@@ -260,10 +260,12 @@ class Ui_MainWindow(object):
 
             self.data = pd.concat([self.train, self.test])
             plt.plot(self.data['Time'].values, self.data['Data'].values)
+            plt.xlabel('Month')
+            plt.ylabel('Number of License')
             plt.savefig('Plot.png')
 
             pic = QtGui.QPixmap('Plot.png')
-            pic = pic.scaled(811, 341)
+            pic = pic.scaled(811, 441)
             self.graphicsView.setPixmap(pic)
 
 
@@ -303,10 +305,12 @@ class Ui_MainWindow(object):
             ttest = dft['var1(t)'].values
             predicted = ax.plot(ttest, ypred, color='red', label='Predicted')
             ax.legend()
+            plt.xlabel('Month')
+            plt.ylabel('Number of License')
             plt.savefig('Plot.png')
 
             pic = QtGui.QPixmap('Plot.png')
-            pic = pic.scaled(811, 341)
+            pic = pic.scaled(811, 441)
             self.graphicsView.setPixmap(pic)
 
             item = QtWidgets.QTableWidgetItem()
@@ -567,11 +571,13 @@ class Ui_MainWindow(object):
                 f, ax = plt.subplots()
                 actual = ax.plot(self.data['Time'].values, self.data['Data'].values, color='blue', label='Actual')
                 predicted = ax.plot(forecast_time, ypred, color='red', label='Forecast')
+                plt.xlabel('Month')
+                plt.ylabel('Number of License')
                 ax.legend()
                 plt.savefig('Plot.png')
 
                 pic = QtGui.QPixmap('Plot.png')
-                pic = pic.scaled(511, 341)
+                pic = pic.scaled(811, 441)
                 self.graphicsView.setPixmap(pic)
 
                 self.tableWidget.setRowCount(len(self.train) + len(self.test) + len(ypred))

@@ -7,6 +7,10 @@
    'c:\\users\\azhary '
    'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\_strptime.py',
    'PYMODULE'),
+  ('tracemalloc',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\tracemalloc.py',
+   'PYMODULE'),
   ('_py_abc',
    'c:\\users\\azhary '
    'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\_py_abc.py',
@@ -14,10 +18,6 @@
   ('stringprep',
    'c:\\users\\azhary '
    'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\stringprep.py',
-   'PYMODULE'),
-  ('tracemalloc',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\tracemalloc.py',
    'PYMODULE'),
   ('_markupbase',
    'c:\\users\\azhary '
@@ -3371,10 +3371,6 @@
    'c:\\users\\azhary '
    'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\zmq\\__init__.py',
    'PYMODULE'),
-  ('zmq.backend.cython',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\zmq\\backend\\cython\\__init__.py',
-   'PYMODULE'),
   ('zmq.backend.cffi',
    'c:\\users\\azhary '
    'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\zmq\\backend\\cffi\\__init__.py',
@@ -3414,6 +3410,10 @@
   ('zmq.backend.cffi.constants',
    'c:\\users\\azhary '
    'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\zmq\\backend\\cffi\\constants.py',
+   'PYMODULE'),
+  ('zmq.backend.cython',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\zmq\\backend\\cython\\__init__.py',
    'PYMODULE'),
   ('zmq.utils.garbage',
    'c:\\users\\azhary '
@@ -3935,10 +3935,6 @@
    'c:\\users\\azhary '
    'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\_scilab_builtins.py',
    'PYMODULE'),
-  ('pygments.lexers._mql_builtins',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\_mql_builtins.py',
-   'PYMODULE'),
   ('pygments.lexers._tsql_builtins',
    'c:\\users\\azhary '
    'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\_tsql_builtins.py',
@@ -4003,493 +3999,145 @@
    'c:\\users\\azhary '
    'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\__init__.py',
    'PYMODULE'),
-  ('pygments.styles.colorful',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\styles\\colorful.py',
-   'PYMODULE'),
-  ('pygments.styles.monokai',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\styles\\monokai.py',
-   'PYMODULE'),
-  ('pygments.styles.paraiso_light',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\styles\\paraiso_light.py',
-   'PYMODULE'),
-  ('pygments.styles.friendly',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\styles\\friendly.py',
-   'PYMODULE'),
-  ('pygments.styles.murphy',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\styles\\murphy.py',
-   'PYMODULE'),
-  ('pygments.styles.rainbow_dash',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\styles\\rainbow_dash.py',
-   'PYMODULE'),
-  ('pygments.styles.vs',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\styles\\vs.py',
-   'PYMODULE'),
-  ('pygments.styles.tango',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\styles\\tango.py',
-   'PYMODULE'),
   ('pygments.styles.sas',
    'c:\\users\\azhary '
    'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\styles\\sas.py',
-   'PYMODULE'),
-  ('pygments.styles.trac',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\styles\\trac.py',
-   'PYMODULE'),
-  ('pygments.styles.fruity',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\styles\\fruity.py',
-   'PYMODULE'),
-  ('pygments.styles.manni',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\styles\\manni.py',
-   'PYMODULE'),
-  ('pygments.styles.autumn',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\styles\\autumn.py',
    'PYMODULE'),
   ('pygments.styles.algol_nu',
    'c:\\users\\azhary '
    'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\styles\\algol_nu.py',
    'PYMODULE'),
-  ('pygments.styles.borland',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\styles\\borland.py',
-   'PYMODULE'),
   ('pygments.styles.abap',
    'c:\\users\\azhary '
    'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\styles\\abap.py',
    'PYMODULE'),
-  ('pygments.styles.bw',
+  ('pygments.styles.autumn',
    'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\styles\\bw.py',
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\styles\\autumn.py',
+   'PYMODULE'),
+  ('pygments.styles.rainbow_dash',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\styles\\rainbow_dash.py',
    'PYMODULE'),
   ('pygments.styles.perldoc',
    'c:\\users\\azhary '
    'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\styles\\perldoc.py',
    'PYMODULE'),
-  ('pygments.styles.lovelace',
+  ('pygments.styles.fruity',
    'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\styles\\lovelace.py',
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\styles\\fruity.py',
    'PYMODULE'),
-  ('pygments.styles.native',
+  ('pygments.styles.bw',
    'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\styles\\native.py',
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\styles\\bw.py',
    'PYMODULE'),
-  ('pygments.styles.stata',
+  ('pygments.styles.murphy',
    'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\styles\\stata.py',
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\styles\\murphy.py',
    'PYMODULE'),
-  ('pygments.styles.default',
+  ('pygments.styles.monokai',
    'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\styles\\default.py',
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\styles\\monokai.py',
    'PYMODULE'),
-  ('pygments.styles.emacs',
+  ('pygments.styles.manni',
    'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\styles\\emacs.py',
-   'PYMODULE'),
-  ('pygments.styles.arduino',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\styles\\arduino.py',
-   'PYMODULE'),
-  ('pygments.styles.pastie',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\styles\\pastie.py',
-   'PYMODULE'),
-  ('pygments.styles.xcode',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\styles\\xcode.py',
-   'PYMODULE'),
-  ('pygments.styles.algol',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\styles\\algol.py',
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\styles\\manni.py',
    'PYMODULE'),
   ('pygments.styles.rrt',
    'c:\\users\\azhary '
    'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\styles\\rrt.py',
    'PYMODULE'),
+  ('pygments.styles.emacs',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\styles\\emacs.py',
+   'PYMODULE'),
+  ('pygments.styles.algol',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\styles\\algol.py',
+   'PYMODULE'),
+  ('pygments.styles.friendly',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\styles\\friendly.py',
+   'PYMODULE'),
+  ('pygments.styles.default',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\styles\\default.py',
+   'PYMODULE'),
+  ('pygments.styles.native',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\styles\\native.py',
+   'PYMODULE'),
+  ('pygments.styles.lovelace',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\styles\\lovelace.py',
+   'PYMODULE'),
+  ('pygments.styles.arduino',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\styles\\arduino.py',
+   'PYMODULE'),
+  ('pygments.styles.vs',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\styles\\vs.py',
+   'PYMODULE'),
+  ('pygments.styles.pastie',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\styles\\pastie.py',
+   'PYMODULE'),
+  ('pygments.styles.trac',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\styles\\trac.py',
+   'PYMODULE'),
+  ('pygments.styles.tango',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\styles\\tango.py',
+   'PYMODULE'),
+  ('pygments.styles.colorful',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\styles\\colorful.py',
+   'PYMODULE'),
+  ('pygments.styles.borland',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\styles\\borland.py',
+   'PYMODULE'),
+  ('pygments.styles.stata',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\styles\\stata.py',
+   'PYMODULE'),
   ('pygments.styles.paraiso_dark',
    'c:\\users\\azhary '
    'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\styles\\paraiso_dark.py',
-   'PYMODULE'),
-  ('pygments.styles.igor',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\styles\\igor.py',
    'PYMODULE'),
   ('pygments.styles.vim',
    'c:\\users\\azhary '
    'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\styles\\vim.py',
    'PYMODULE'),
-  ('pygments.lexers.clean',
+  ('pygments.styles.igor',
    'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\clean.py',
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\styles\\igor.py',
    'PYMODULE'),
-  ('pygments.lexers.pascal',
+  ('pygments.styles.xcode',
    'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\pascal.py',
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\styles\\xcode.py',
    'PYMODULE'),
-  ('pygments.scanner',
+  ('pygments.styles.paraiso_light',
    'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\scanner.py',
-   'PYMODULE'),
-  ('pygments.lexers.ncl',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\ncl.py',
-   'PYMODULE'),
-  ('pygments.lexers.pawn',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\pawn.py',
-   'PYMODULE'),
-  ('pygments.lexers.urbi',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\urbi.py',
-   'PYMODULE'),
-  ('pygments.lexers.haskell',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\haskell.py',
-   'PYMODULE'),
-  ('pygments.unistring',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\unistring.py',
-   'PYMODULE'),
-  ('pygments.lexers.dalvik',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\dalvik.py',
-   'PYMODULE'),
-  ('pygments.lexers.tcl',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\tcl.py',
-   'PYMODULE'),
-  ('pygments.lexers.chapel',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\chapel.py',
-   'PYMODULE'),
-  ('pygments.lexers.javascript',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\javascript.py',
-   'PYMODULE'),
-  ('pygments.lexers._lasso_builtins',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\_lasso_builtins.py',
-   'PYMODULE'),
-  ('pygments.lexers.erlang',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\erlang.py',
-   'PYMODULE'),
-  ('pygments.lexers.roboconf',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\roboconf.py',
-   'PYMODULE'),
-  ('pygments.lexers.typoscript',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\typoscript.py',
-   'PYMODULE'),
-  ('pygments.lexers.haxe',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\haxe.py',
-   'PYMODULE'),
-  ('pygments.lexers.whiley',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\whiley.py',
-   'PYMODULE'),
-  ('pygments.lexers.int_fiction',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\int_fiction.py',
-   'PYMODULE'),
-  ('pygments.lexers.varnish',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\varnish.py',
-   'PYMODULE'),
-  ('pygments.lexers.robotframework',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\robotframework.py',
-   'PYMODULE'),
-  ('pygments.lexers.xorg',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\xorg.py',
-   'PYMODULE'),
-  ('pygments.lexers.prolog',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\prolog.py',
-   'PYMODULE'),
-  ('pygments.lexers._stata_builtins',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\_stata_builtins.py',
-   'PYMODULE'),
-  ('pygments.lexers.diff',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\diff.py',
-   'PYMODULE'),
-  ('pygments.lexers.matlab',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\matlab.py',
-   'PYMODULE'),
-  ('pygments.lexers.graph',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\graph.py',
-   'PYMODULE'),
-  ('pygments.lexers.objective',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\objective.py',
-   'PYMODULE'),
-  ('pygments.lexers.textedit',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\textedit.py',
-   'PYMODULE'),
-  ('pygments.lexers.rnc',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\rnc.py',
-   'PYMODULE'),
-  ('pygments.lexers.templates',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\templates.py',
-   'PYMODULE'),
-  ('pygments.lexers.shell',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\shell.py',
-   'PYMODULE'),
-  ('pygments.lexers.installers',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\installers.py',
-   'PYMODULE'),
-  ('pygments.lexers.d',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\d.py',
-   'PYMODULE'),
-  ('pygments.lexers.snobol',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\snobol.py',
-   'PYMODULE'),
-  ('pygments.lexers.trafficscript',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\trafficscript.py',
-   'PYMODULE'),
-  ('pygments.lexers.rdf',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\rdf.py',
-   'PYMODULE'),
-  ('pygments.lexers._openedge_builtins',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\_openedge_builtins.py',
-   'PYMODULE'),
-  ('pygments.lexers.eiffel',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\eiffel.py',
-   'PYMODULE'),
-  ('pygments.lexers._php_builtins',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\_php_builtins.py',
-   'PYMODULE'),
-  ('pygments.lexers._sourcemod_builtins',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\_sourcemod_builtins.py',
-   'PYMODULE'),
-  ('pygments.lexers.dylan',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\dylan.py',
-   'PYMODULE'),
-  ('pygments.lexers.css',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\css.py',
-   'PYMODULE'),
-  ('pygments.lexers.actionscript',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\actionscript.py',
-   'PYMODULE'),
-  ('pygments.lexers.theorem',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\theorem.py',
-   'PYMODULE'),
-  ('pygments.lexers.smv',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\smv.py',
-   'PYMODULE'),
-  ('pygments.lexers.ooc',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\ooc.py',
-   'PYMODULE'),
-  ('pygments.lexers.ml',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\ml.py',
-   'PYMODULE'),
-  ('pygments.lexers.ezhil',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\ezhil.py',
-   'PYMODULE'),
-  ('pygments.lexers.smalltalk',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\smalltalk.py',
-   'PYMODULE'),
-  ('pygments.lexers.data',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\data.py',
-   'PYMODULE'),
-  ('pygments.lexers.automation',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\automation.py',
-   'PYMODULE'),
-  ('pygments.lexers.python',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\python.py',
-   'PYMODULE'),
-  ('pygments.lexers.modeling',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\modeling.py',
-   'PYMODULE'),
-  ('pygments.lexers.idl',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\idl.py',
-   'PYMODULE'),
-  ('pygments.lexers.fantom',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\fantom.py',
-   'PYMODULE'),
-  ('pygments.lexers.crystal',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\crystal.py',
-   'PYMODULE'),
-  ('pygments.lexers._csound_builtins',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\_csound_builtins.py',
-   'PYMODULE'),
-  ('pygments.lexers.webmisc',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\webmisc.py',
-   'PYMODULE'),
-  ('pygments.lexers.supercollider',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\supercollider.py',
-   'PYMODULE'),
-  ('pygments.lexers.c_like',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\c_like.py',
-   'PYMODULE'),
-  ('pygments.lexers.rebol',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\rebol.py',
-   'PYMODULE'),
-  ('pygments.lexers.graphics',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\graphics.py',
-   'PYMODULE'),
-  ('pygments.lexers.hexdump',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\hexdump.py',
-   'PYMODULE'),
-  ('pygments.lexers.ampl',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\ampl.py',
-   'PYMODULE'),
-  ('pygments.lexers.perl',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\perl.py',
-   'PYMODULE'),
-  ('pygments.lexers.oberon',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\oberon.py',
-   'PYMODULE'),
-  ('pygments.lexers.inferno',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\inferno.py',
-   'PYMODULE'),
-  ('pygments.lexers.iolang',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\iolang.py',
-   'PYMODULE'),
-  ('pygments.lexers.basic',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\basic.py',
-   'PYMODULE'),
-  ('pygments.lexers.parsers',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\parsers.py',
-   'PYMODULE'),
-  ('pygments.lexers.apl',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\apl.py',
-   'PYMODULE'),
-  ('pygments.lexers.nit',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\nit.py',
-   'PYMODULE'),
-  ('pygments.lexers.console',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\console.py',
-   'PYMODULE'),
-  ('pygments.lexers.c_cpp',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\c_cpp.py',
-   'PYMODULE'),
-  ('pygments.lexers.asm',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\asm.py',
-   'PYMODULE'),
-  ('pygments.lexers.nimrod',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\nimrod.py',
-   'PYMODULE'),
-  ('pygments.lexers.algebra',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\algebra.py',
-   'PYMODULE'),
-  ('pygments.lexers.capnproto',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\capnproto.py',
-   'PYMODULE'),
-  ('pygments.lexers.fortran',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\fortran.py',
-   'PYMODULE'),
-  ('pygments.lexers.modula2',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\modula2.py',
-   'PYMODULE'),
-  ('pygments.lexers.business',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\business.py',
-   'PYMODULE'),
-  ('pygments.lexers.parasail',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\parasail.py',
-   'PYMODULE'),
-  ('pygments.lexers.go',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\go.py',
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\styles\\paraiso_light.py',
    'PYMODULE'),
   ('pygments.lexers.ecl',
    'c:\\users\\azhary '
    'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\ecl.py',
    'PYMODULE'),
-  ('pygments.lexers.jvm',
+  ('pygments.lexers.int_fiction',
    'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\jvm.py',
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\int_fiction.py',
    'PYMODULE'),
-  ('pygments.lexers.factor',
+  ('pygments.lexers.qvt',
    'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\factor.py',
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\qvt.py',
    'PYMODULE'),
-  ('pygments.lexers.j',
+  ('pygments.lexers.diff',
    'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\j.py',
-   'PYMODULE'),
-  ('pygments.lexers.text',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\text.py',
-   'PYMODULE'),
-  ('pygments.lexers.forth',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\forth.py',
-   'PYMODULE'),
-  ('pygments.lexers._vim_builtins',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\_vim_builtins.py',
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\diff.py',
    'PYMODULE'),
   ('pygments.lexers.web',
    'c:\\users\\azhary '
@@ -4499,189 +4147,537 @@
    'c:\\users\\azhary '
    'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\_asy_builtins.py',
    'PYMODULE'),
-  ('pygments.lexers.esoteric',
+  ('pygments.lexers.nimrod',
    'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\esoteric.py',
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\nimrod.py',
    'PYMODULE'),
-  ('pygments.lexers.agile',
+  ('pygments.lexers.asm',
    'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\agile.py',
-   'PYMODULE'),
-  ('pygments.lexers.r',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\r.py',
-   'PYMODULE'),
-  ('pygments.lexers.sas',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\sas.py',
-   'PYMODULE'),
-  ('pygments.lexers._cocoa_builtins',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\_cocoa_builtins.py',
-   'PYMODULE'),
-  ('pygments.lexers.felix',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\felix.py',
-   'PYMODULE'),
-  ('pygments.lexers.foxpro',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\foxpro.py',
-   'PYMODULE'),
-  ('pygments.lexers.verification',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\verification.py',
-   'PYMODULE'),
-  ('pygments.lexers.grammar_notation',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\grammar_notation.py',
-   'PYMODULE'),
-  ('pygments.lexers._cl_builtins',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\_cl_builtins.py',
-   'PYMODULE'),
-  ('pygments.lexers.rust',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\rust.py',
-   'PYMODULE'),
-  ('pygments.lexers.configs',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\configs.py',
-   'PYMODULE'),
-  ('pygments.lexers.other',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\other.py',
-   'PYMODULE'),
-  ('pygments.lexers.x10',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\x10.py',
-   'PYMODULE'),
-  ('pygments.lexers.functional',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\functional.py',
-   'PYMODULE'),
-  ('pygments.lexers.dsls',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\dsls.py',
-   'PYMODULE'),
-  ('pygments.lexers.nix',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\nix.py',
-   'PYMODULE'),
-  ('pygments.lexers.math',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\math.py',
-   'PYMODULE'),
-  ('pygments.lexers.compiled',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\compiled.py',
-   'PYMODULE'),
-  ('pygments.lexers.html',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\html.py',
-   'PYMODULE'),
-  ('pygments.lexers.stata',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\stata.py',
-   'PYMODULE'),
-  ('pygments.lexers.ruby',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\ruby.py',
-   'PYMODULE'),
-  ('pygments.lexers.resource',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\resource.py',
-   'PYMODULE'),
-  ('pygments.lexers.lisp',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\lisp.py',
-   'PYMODULE'),
-  ('pygments.lexers._postgres_builtins',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\_postgres_builtins.py',
-   'PYMODULE'),
-  ('pygments.lexers.testing',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\testing.py',
-   'PYMODULE'),
-  ('pygments.lexers.csound',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\csound.py',
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\asm.py',
    'PYMODULE'),
   ('pygments.lexers.praat',
    'c:\\users\\azhary '
    'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\praat.py',
    'PYMODULE'),
-  ('pygments.lexers.qvt',
+  ('pygments.lexers.scripting',
    'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\qvt.py',
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\scripting.py',
+   'PYMODULE'),
+  ('pygments.lexers.console',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\console.py',
+   'PYMODULE'),
+  ('pygments.lexers.templates',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\templates.py',
+   'PYMODULE'),
+  ('pygments.lexers.c_like',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\c_like.py',
+   'PYMODULE'),
+  ('pygments.lexers.capnproto',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\capnproto.py',
+   'PYMODULE'),
+  ('pygments.lexers.r',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\r.py',
+   'PYMODULE'),
+  ('pygments.lexers.crystal',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\crystal.py',
+   'PYMODULE'),
+  ('pygments.lexers.iolang',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\iolang.py',
+   'PYMODULE'),
+  ('pygments.lexers.matlab',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\matlab.py',
    'PYMODULE'),
   ('pygments.lexers.dotnet',
    'c:\\users\\azhary '
    'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\dotnet.py',
    'PYMODULE'),
-  ('pygments.lexers.scripting',
+  ('pygments.lexers.smalltalk',
    'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\scripting.py',
-   'PYMODULE'),
-  ('pygments.lexers.make',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\make.py',
-   'PYMODULE'),
-  ('pygments.lexers.igor',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\igor.py',
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\smalltalk.py',
    'PYMODULE'),
   ('pygments.lexers.ambient',
    'c:\\users\\azhary '
    'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\ambient.py',
    'PYMODULE'),
-  ('pygments.lexers.bibtex',
+  ('pygments.lexers.lisp',
    'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\bibtex.py',
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\lisp.py',
    'PYMODULE'),
-  ('pygments.lexers.textfmts',
+  ('pygments.lexers.textedit',
    'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\textfmts.py',
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\textedit.py',
    'PYMODULE'),
-  ('pygments.lexers._lua_builtins',
+  ('pygments.lexers.foxpro',
    'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\_lua_builtins.py',
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\foxpro.py',
    'PYMODULE'),
-  ('pygments.lexers.sql',
+  ('pygments.lexers._cl_builtins',
    'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\sql.py',
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\_cl_builtins.py',
    'PYMODULE'),
-  ('pygments.lexers.archetype',
+  ('pygments.lexers.jvm',
    'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\archetype.py',
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\jvm.py',
    'PYMODULE'),
-  ('pygments.lexers.monte',
+  ('pygments.lexers._csound_builtins',
    'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\monte.py',
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\_csound_builtins.py',
    'PYMODULE'),
-  ('pygments.lexers.hdl',
+  ('pygments.lexers.j',
    'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\hdl.py',
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\j.py',
+   'PYMODULE'),
+  ('pygments.lexers.pascal',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\pascal.py',
+   'PYMODULE'),
+  ('pygments.scanner',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\scanner.py',
    'PYMODULE'),
   ('pygments.lexers.markup',
    'c:\\users\\azhary '
    'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\markup.py',
    'PYMODULE'),
+  ('pygments.lexers.forth',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\forth.py',
+   'PYMODULE'),
+  ('pygments.lexers._sourcemod_builtins',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\_sourcemod_builtins.py',
+   'PYMODULE'),
+  ('pygments.lexers.inferno',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\inferno.py',
+   'PYMODULE'),
+  ('pygments.lexers.igor',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\igor.py',
+   'PYMODULE'),
+  ('pygments.lexers.css',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\css.py',
+   'PYMODULE'),
+  ('pygments.lexers.clean',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\clean.py',
+   'PYMODULE'),
+  ('pygments.lexers.ruby',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\ruby.py',
+   'PYMODULE'),
+  ('pygments.lexers.automation',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\automation.py',
+   'PYMODULE'),
+  ('pygments.lexers.resource',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\resource.py',
+   'PYMODULE'),
+  ('pygments.lexers.fortran',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\fortran.py',
+   'PYMODULE'),
+  ('pygments.lexers.haxe',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\haxe.py',
+   'PYMODULE'),
+  ('pygments.lexers.sas',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\sas.py',
+   'PYMODULE'),
+  ('pygments.lexers.fantom',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\fantom.py',
+   'PYMODULE'),
+  ('pygments.lexers.graphics',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\graphics.py',
+   'PYMODULE'),
+  ('pygments.lexers.agile',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\agile.py',
+   'PYMODULE'),
+  ('pygments.lexers.pawn',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\pawn.py',
+   'PYMODULE'),
+  ('pygments.lexers._lasso_builtins',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\_lasso_builtins.py',
+   'PYMODULE'),
+  ('pygments.lexers.modeling',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\modeling.py',
+   'PYMODULE'),
+  ('pygments.lexers.oberon',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\oberon.py',
+   'PYMODULE'),
+  ('pygments.lexers.configs',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\configs.py',
+   'PYMODULE'),
+  ('pygments.lexers.prolog',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\prolog.py',
+   'PYMODULE'),
+  ('pygments.lexers.d',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\d.py',
+   'PYMODULE'),
+  ('pygments.lexers.compiled',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\compiled.py',
+   'PYMODULE'),
+  ('pygments.lexers.rdf',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\rdf.py',
+   'PYMODULE'),
+  ('pygments.lexers.bibtex',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\bibtex.py',
+   'PYMODULE'),
+  ('pygments.lexers.c_cpp',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\c_cpp.py',
+   'PYMODULE'),
+  ('pygments.lexers._vim_builtins',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\_vim_builtins.py',
+   'PYMODULE'),
+  ('pygments.lexers.actionscript',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\actionscript.py',
+   'PYMODULE'),
+  ('pygments.lexers.textfmts',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\textfmts.py',
+   'PYMODULE'),
+  ('pygments.lexers.monte',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\monte.py',
+   'PYMODULE'),
+  ('pygments.lexers._php_builtins',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\_php_builtins.py',
+   'PYMODULE'),
+  ('pygments.lexers.testing',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\testing.py',
+   'PYMODULE'),
+  ('pygments.lexers.other',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\other.py',
+   'PYMODULE'),
+  ('pygments.lexers.ezhil',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\ezhil.py',
+   'PYMODULE'),
+  ('pygments.lexers.csound',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\csound.py',
+   'PYMODULE'),
+  ('pygments.lexers.chapel',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\chapel.py',
+   'PYMODULE'),
+  ('pygments.lexers.math',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\math.py',
+   'PYMODULE'),
+  ('pygments.lexers.theorem',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\theorem.py',
+   'PYMODULE'),
+  ('pygments.lexers.eiffel',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\eiffel.py',
+   'PYMODULE'),
+  ('pygments.lexers.xorg',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\xorg.py',
+   'PYMODULE'),
+  ('pygments.lexers.erlang',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\erlang.py',
+   'PYMODULE'),
+  ('pygments.lexers.python',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\python.py',
+   'PYMODULE'),
+  ('pygments.lexers.perl',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\perl.py',
+   'PYMODULE'),
+  ('pygments.lexers.hdl',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\hdl.py',
+   'PYMODULE'),
+  ('pygments.lexers.roboconf',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\roboconf.py',
+   'PYMODULE'),
   ('pygments.lexers.julia',
    'c:\\users\\azhary '
    'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\julia.py',
    'PYMODULE'),
-  ('pygments.lexers.elm',
+  ('pygments.lexers.robotframework',
    'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\elm.py',
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\robotframework.py',
+   'PYMODULE'),
+  ('pygments.lexers.javascript',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\javascript.py',
+   'PYMODULE'),
+  ('pygments.lexers._mql_builtins',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\_mql_builtins.py',
+   'PYMODULE'),
+  ('pygments.lexers.felix',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\felix.py',
+   'PYMODULE'),
+  ('pygments.lexers.tcl',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\tcl.py',
+   'PYMODULE'),
+  ('pygments.lexers.idl',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\idl.py',
+   'PYMODULE'),
+  ('pygments.lexers.business',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\business.py',
+   'PYMODULE'),
+  ('pygments.lexers.parasail',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\parasail.py',
+   'PYMODULE'),
+  ('pygments.lexers.installers',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\installers.py',
+   'PYMODULE'),
+  ('pygments.lexers.urbi',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\urbi.py',
+   'PYMODULE'),
+  ('pygments.lexers.webmisc',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\webmisc.py',
+   'PYMODULE'),
+  ('pygments.lexers.nit',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\nit.py',
+   'PYMODULE'),
+  ('pygments.lexers.nix',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\nix.py',
+   'PYMODULE'),
+  ('pygments.lexers.ooc',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\ooc.py',
+   'PYMODULE'),
+  ('pygments.lexers.stata',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\stata.py',
+   'PYMODULE'),
+  ('pygments.lexers.sql',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\sql.py',
+   'PYMODULE'),
+  ('pygments.lexers.rebol',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\rebol.py',
+   'PYMODULE'),
+  ('pygments.lexers.ncl',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\ncl.py',
+   'PYMODULE'),
+  ('pygments.lexers.haskell',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\haskell.py',
+   'PYMODULE'),
+  ('pygments.lexers.go',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\go.py',
+   'PYMODULE'),
+  ('pygments.lexers.functional',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\functional.py',
+   'PYMODULE'),
+  ('pygments.lexers.snobol',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\snobol.py',
+   'PYMODULE'),
+  ('pygments.lexers.archetype',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\archetype.py',
+   'PYMODULE'),
+  ('pygments.lexers.graph',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\graph.py',
+   'PYMODULE'),
+  ('pygments.lexers.verification',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\verification.py',
+   'PYMODULE'),
+  ('pygments.lexers.ampl',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\ampl.py',
+   'PYMODULE'),
+  ('pygments.lexers._lua_builtins',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\_lua_builtins.py',
+   'PYMODULE'),
+  ('pygments.lexers._cocoa_builtins',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\_cocoa_builtins.py',
+   'PYMODULE'),
+  ('pygments.lexers.esoteric',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\esoteric.py',
+   'PYMODULE'),
+  ('pygments.lexers.varnish',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\varnish.py',
+   'PYMODULE'),
+  ('pygments.lexers.whiley',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\whiley.py',
+   'PYMODULE'),
+  ('pygments.lexers.objective',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\objective.py',
+   'PYMODULE'),
+  ('pygments.lexers.supercollider',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\supercollider.py',
+   'PYMODULE'),
+  ('pygments.lexers._postgres_builtins',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\_postgres_builtins.py',
+   'PYMODULE'),
+  ('pygments.lexers.x10',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\x10.py',
+   'PYMODULE'),
+  ('pygments.lexers.hexdump',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\hexdump.py',
+   'PYMODULE'),
+  ('pygments.lexers._stata_builtins',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\_stata_builtins.py',
    'PYMODULE'),
   ('pygments.lexers.php',
    'c:\\users\\azhary '
    'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\php.py',
    'PYMODULE'),
-  ('pygments.formatters.html',
+  ('pygments.lexers.dylan',
    'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\formatters\\html.py',
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\dylan.py',
+   'PYMODULE'),
+  ('pygments.lexers._openedge_builtins',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\_openedge_builtins.py',
+   'PYMODULE'),
+  ('pygments.lexers.dsls',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\dsls.py',
+   'PYMODULE'),
+  ('pygments.lexers.rust',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\rust.py',
+   'PYMODULE'),
+  ('pygments.lexers.parsers',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\parsers.py',
+   'PYMODULE'),
+  ('pygments.lexers.html',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\html.py',
+   'PYMODULE'),
+  ('pygments.lexers.dalvik',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\dalvik.py',
+   'PYMODULE'),
+  ('pygments.lexers.data',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\data.py',
+   'PYMODULE'),
+  ('pygments.lexers.smv',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\smv.py',
+   'PYMODULE'),
+  ('pygments.lexers.trafficscript',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\trafficscript.py',
+   'PYMODULE'),
+  ('pygments.lexers.grammar_notation',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\grammar_notation.py',
+   'PYMODULE'),
+  ('pygments.lexers.ml',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\ml.py',
+   'PYMODULE'),
+  ('pygments.lexers.algebra',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\algebra.py',
+   'PYMODULE'),
+  ('pygments.lexers.factor',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\factor.py',
+   'PYMODULE'),
+  ('pygments.lexers.modula2',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\modula2.py',
+   'PYMODULE'),
+  ('pygments.lexers.basic',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\basic.py',
+   'PYMODULE'),
+  ('pygments.lexers.rnc',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\rnc.py',
+   'PYMODULE'),
+  ('pygments.lexers.make',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\make.py',
+   'PYMODULE'),
+  ('pygments.lexers.shell',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\shell.py',
+   'PYMODULE'),
+  ('pygments.lexers.apl',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\apl.py',
+   'PYMODULE'),
+  ('pygments.lexers.elm',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\elm.py',
+   'PYMODULE'),
+  ('pygments.lexers.text',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\text.py',
+   'PYMODULE'),
+  ('pygments.unistring',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\unistring.py',
+   'PYMODULE'),
+  ('pygments.lexers.typoscript',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\lexers\\typoscript.py',
    'PYMODULE'),
   ('pygments.formatters.irc',
    'c:\\users\\azhary '
@@ -4691,9 +4687,9 @@
    'c:\\users\\azhary '
    'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\formatters\\rtf.py',
    'PYMODULE'),
-  ('pygments.formatters.img',
+  ('pygments.formatters.html',
    'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\formatters\\img.py',
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\formatters\\html.py',
    'PYMODULE'),
   ('pygments.formatters.bbcode',
    'c:\\users\\azhary '
@@ -4706,6 +4702,10 @@
   ('pygments.formatters.other',
    'c:\\users\\azhary '
    'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\formatters\\other.py',
+   'PYMODULE'),
+  ('pygments.formatters.img',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pygments\\formatters\\img.py',
    'PYMODULE'),
   ('pygments.formatters._mapping',
    'c:\\users\\azhary '
@@ -4958,6 +4958,386 @@
   ('jsonschema.compat',
    'c:\\users\\azhary '
    'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\jsonschema\\compat.py',
+   'PYMODULE'),
+  ('urllib3',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\urllib3\\__init__.py',
+   'PYMODULE'),
+  ('chardet.compat',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\chardet\\compat.py',
+   'PYMODULE'),
+  ('chardet.charsetgroupprober',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\chardet\\charsetgroupprober.py',
+   'PYMODULE'),
+  ('chardet.enums',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\chardet\\enums.py',
+   'PYMODULE'),
+  ('chardet.escsm',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\chardet\\escsm.py',
+   'PYMODULE'),
+  ('chardet.escprober',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\chardet\\escprober.py',
+   'PYMODULE'),
+  ('chardet.latin1prober',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\chardet\\latin1prober.py',
+   'PYMODULE'),
+  ('chardet.utf8prober',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\chardet\\utf8prober.py',
+   'PYMODULE'),
+  ('chardet.sjisprober',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\chardet\\sjisprober.py',
+   'PYMODULE'),
+  ('chardet.jpcntx',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\chardet\\jpcntx.py',
+   'PYMODULE'),
+  ('chardet.eucjpprober',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\chardet\\eucjpprober.py',
+   'PYMODULE'),
+  ('chardet.gb2312prober',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\chardet\\gb2312prober.py',
+   'PYMODULE'),
+  ('chardet.euckrprober',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\chardet\\euckrprober.py',
+   'PYMODULE'),
+  ('chardet.cp949prober',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\chardet\\cp949prober.py',
+   'PYMODULE'),
+  ('chardet.big5prober',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\chardet\\big5prober.py',
+   'PYMODULE'),
+  ('chardet.mbcharsetprober',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\chardet\\mbcharsetprober.py',
+   'PYMODULE'),
+  ('chardet.codingstatemachine',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\chardet\\codingstatemachine.py',
+   'PYMODULE'),
+  ('chardet.euctwfreq',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\chardet\\euctwfreq.py',
+   'PYMODULE'),
+  ('chardet.euckrfreq',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\chardet\\euckrfreq.py',
+   'PYMODULE'),
+  ('chardet.gb2312freq',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\chardet\\gb2312freq.py',
+   'PYMODULE'),
+  ('chardet.big5freq',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\chardet\\big5freq.py',
+   'PYMODULE'),
+  ('chardet.jisfreq',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\chardet\\jisfreq.py',
+   'PYMODULE'),
+  ('chardet.chardistribution',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\chardet\\chardistribution.py',
+   'PYMODULE'),
+  ('chardet.mbcssm',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\chardet\\mbcssm.py',
+   'PYMODULE'),
+  ('chardet.euctwprober',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\chardet\\euctwprober.py',
+   'PYMODULE'),
+  ('chardet.mbcsgroupprober',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\chardet\\mbcsgroupprober.py',
+   'PYMODULE'),
+  ('chardet.sbcharsetprober',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\chardet\\sbcharsetprober.py',
+   'PYMODULE'),
+  ('chardet.langcyrillicmodel',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\chardet\\langcyrillicmodel.py',
+   'PYMODULE'),
+  ('chardet.langgreekmodel',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\chardet\\langgreekmodel.py',
+   'PYMODULE'),
+  ('chardet.langbulgarianmodel',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\chardet\\langbulgarianmodel.py',
+   'PYMODULE'),
+  ('chardet.langthaimodel',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\chardet\\langthaimodel.py',
+   'PYMODULE'),
+  ('chardet.langhebrewmodel',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\chardet\\langhebrewmodel.py',
+   'PYMODULE'),
+  ('chardet.charsetprober',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\chardet\\charsetprober.py',
+   'PYMODULE'),
+  ('chardet.hebrewprober',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\chardet\\hebrewprober.py',
+   'PYMODULE'),
+  ('chardet.langturkishmodel',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\chardet\\langturkishmodel.py',
+   'PYMODULE'),
+  ('chardet.sbcsgroupprober',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\chardet\\sbcsgroupprober.py',
+   'PYMODULE'),
+  ('chardet.universaldetector',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\chardet\\universaldetector.py',
+   'PYMODULE'),
+  ('chardet.version',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\chardet\\version.py',
+   'PYMODULE'),
+  ('chardet',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\chardet\\__init__.py',
+   'PYMODULE'),
+  ('requests.exceptions',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\requests\\exceptions.py',
+   'PYMODULE'),
+  ('urllib3.contrib',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\urllib3\\contrib\\__init__.py',
+   'PYMODULE'),
+  ('urllib3.packages.backports',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\urllib3\\packages\\backports\\__init__.py',
+   'PYMODULE'),
+  ('urllib3.packages.backports.makefile',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\urllib3\\packages\\backports\\makefile.py',
+   'PYMODULE'),
+  ('urllib3.contrib.pyopenssl',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\urllib3\\contrib\\pyopenssl.py',
+   'PYMODULE'),
+  ('urllib3.exceptions',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\urllib3\\exceptions.py',
+   'PYMODULE'),
+  ('requests.__version__',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\requests\\__version__.py',
+   'PYMODULE'),
+  ('certifi.core',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\certifi\\core.py',
+   'PYMODULE'),
+  ('certifi',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\certifi\\__init__.py',
+   'PYMODULE'),
+  ('requests.certs',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\requests\\certs.py',
+   'PYMODULE'),
+  ('requests.utils',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\requests\\utils.py',
+   'PYMODULE'),
+  ('requests.packages',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\requests\\packages.py',
+   'PYMODULE'),
+  ('idna.package_data',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\idna\\package_data.py',
+   'PYMODULE'),
+  ('idna.idnadata',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\idna\\idnadata.py',
+   'PYMODULE'),
+  ('idna.intranges',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\idna\\intranges.py',
+   'PYMODULE'),
+  ('idna.uts46data',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\idna\\uts46data.py',
+   'PYMODULE'),
+  ('idna.core',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\idna\\core.py',
+   'PYMODULE'),
+  ('idna',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\idna\\__init__.py',
+   'PYMODULE'),
+  ('requests.models',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\requests\\models.py',
+   'PYMODULE'),
+  ('requests.auth',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\requests\\auth.py',
+   'PYMODULE'),
+  ('requests.cookies',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\requests\\cookies.py',
+   'PYMODULE'),
+  ('requests.hooks',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\requests\\hooks.py',
+   'PYMODULE'),
+  ('requests._internal_utils',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\requests\\_internal_utils.py',
+   'PYMODULE'),
+  ('urllib3.poolmanager',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\urllib3\\poolmanager.py',
+   'PYMODULE'),
+  ('urllib3.response',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\urllib3\\response.py',
+   'PYMODULE'),
+  ('urllib3.util',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\urllib3\\util\\__init__.py',
+   'PYMODULE'),
+  ('urllib3.util.retry',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\urllib3\\util\\retry.py',
+   'PYMODULE'),
+  ('socks',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\socks.py',
+   'PYMODULE'),
+  ('urllib3.util.ssl_',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\urllib3\\util\\ssl_.py',
+   'PYMODULE'),
+  ('urllib3._collections',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\urllib3\\_collections.py',
+   'PYMODULE'),
+  ('urllib3.connection',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\urllib3\\connection.py',
+   'PYMODULE'),
+  ('ipaddress',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\ipaddress.py',
+   'PYMODULE'),
+  ('urllib3.packages.ssl_match_hostname._implementation',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\urllib3\\packages\\ssl_match_hostname\\_implementation.py',
+   'PYMODULE'),
+  ('urllib3.packages.ssl_match_hostname',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\urllib3\\packages\\ssl_match_hostname\\__init__.py',
+   'PYMODULE'),
+  ('urllib3.packages',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\urllib3\\packages\\__init__.py',
+   'PYMODULE'),
+  ('urllib3.packages.six',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\urllib3\\packages\\six.py',
+   'PYMODULE'),
+  ('urllib3.fields',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\urllib3\\fields.py',
+   'PYMODULE'),
+  ('urllib3.filepost',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\urllib3\\filepost.py',
+   'PYMODULE'),
+  ('urllib3.request',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\urllib3\\request.py',
+   'PYMODULE'),
+  ('urllib3.util.wait',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\urllib3\\util\\wait.py',
+   'PYMODULE'),
+  ('urllib3.contrib._appengine_environ',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\urllib3\\contrib\\_appengine_environ.py',
+   'PYMODULE'),
+  ('urllib3.util.connection',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\urllib3\\util\\connection.py',
+   'PYMODULE'),
+  ('urllib3.util.request',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\urllib3\\util\\request.py',
+   'PYMODULE'),
+  ('urllib3.util.response',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\urllib3\\util\\response.py',
+   'PYMODULE'),
+  ('urllib3.util.timeout',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\urllib3\\util\\timeout.py',
+   'PYMODULE'),
+  ('urllib3.util.queue',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\urllib3\\util\\queue.py',
+   'PYMODULE'),
+  ('urllib3.connectionpool',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\urllib3\\connectionpool.py',
+   'PYMODULE'),
+  ('urllib3.util.url',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\urllib3\\util\\url.py',
+   'PYMODULE'),
+  ('urllib3.contrib.socks',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\urllib3\\contrib\\socks.py',
+   'PYMODULE'),
+  ('requests.adapters',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\requests\\adapters.py',
+   'PYMODULE'),
+  ('requests.sessions',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\requests\\sessions.py',
+   'PYMODULE'),
+  ('requests.api',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\requests\\api.py',
+   'PYMODULE'),
+  ('requests.compat',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\requests\\compat.py',
+   'PYMODULE'),
+  ('requests.structures',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\requests\\structures.py',
+   'PYMODULE'),
+  ('requests.status_codes',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\requests\\status_codes.py',
+   'PYMODULE'),
+  ('requests',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\requests\\__init__.py',
    'PYMODULE'),
   ('jsonschema.validators',
    'c:\\users\\azhary '
@@ -6951,53 +7331,53 @@
    'c:\\users\\azhary '
    'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\setuptools\\__init__.py',
    'PYMODULE'),
-  ('setuptools._vendor',
+  ('setuptools._vendor.packaging.version',
    'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\setuptools\\_vendor\\__init__.py',
-   'PYMODULE'),
-  ('setuptools._vendor.packaging.markers',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\setuptools\\_vendor\\packaging\\markers.py',
-   'PYMODULE'),
-  ('setuptools._vendor.packaging.requirements',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\setuptools\\_vendor\\packaging\\requirements.py',
-   'PYMODULE'),
-  ('setuptools._vendor.packaging._compat',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\setuptools\\_vendor\\packaging\\_compat.py',
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\setuptools\\_vendor\\packaging\\version.py',
    'PYMODULE'),
   ('setuptools._vendor.packaging.specifiers',
    'c:\\users\\azhary '
    'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\setuptools\\_vendor\\packaging\\specifiers.py',
    'PYMODULE'),
-  ('setuptools._vendor.packaging.utils',
+  ('setuptools._vendor.pyparsing',
    'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\setuptools\\_vendor\\packaging\\utils.py',
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\setuptools\\_vendor\\pyparsing.py',
+   'PYMODULE'),
+  ('setuptools._vendor.packaging.requirements',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\setuptools\\_vendor\\packaging\\requirements.py',
    'PYMODULE'),
   ('setuptools._vendor.packaging',
    'c:\\users\\azhary '
    'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\setuptools\\_vendor\\packaging\\__init__.py',
    'PYMODULE'),
-  ('setuptools._vendor.six',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\setuptools\\_vendor\\six.py',
-   'PYMODULE'),
-  ('setuptools._vendor.packaging._structures',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\setuptools\\_vendor\\packaging\\_structures.py',
-   'PYMODULE'),
-  ('setuptools._vendor.packaging.version',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\setuptools\\_vendor\\packaging\\version.py',
-   'PYMODULE'),
   ('setuptools._vendor.packaging.__about__',
    'c:\\users\\azhary '
    'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\setuptools\\_vendor\\packaging\\__about__.py',
    'PYMODULE'),
-  ('setuptools._vendor.pyparsing',
+  ('setuptools._vendor.six',
    'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\setuptools\\_vendor\\pyparsing.py',
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\setuptools\\_vendor\\six.py',
+   'PYMODULE'),
+  ('setuptools._vendor.packaging.markers',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\setuptools\\_vendor\\packaging\\markers.py',
+   'PYMODULE'),
+  ('setuptools._vendor',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\setuptools\\_vendor\\__init__.py',
+   'PYMODULE'),
+  ('setuptools._vendor.packaging._compat',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\setuptools\\_vendor\\packaging\\_compat.py',
+   'PYMODULE'),
+  ('setuptools._vendor.packaging.utils',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\setuptools\\_vendor\\packaging\\utils.py',
+   'PYMODULE'),
+  ('setuptools._vendor.packaging._structures',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\setuptools\\_vendor\\packaging\\_structures.py',
    'PYMODULE'),
   ('setuptools.msvc',
    'c:\\users\\azhary '
@@ -7991,57 +8371,57 @@
    'c:\\users\\azhary '
    'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pkg_resources\\__init__.py',
    'PYMODULE'),
-  ('pkg_resources._vendor.packaging.utils',
+  ('pkg_resources._vendor.packaging.specifiers',
    'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\utils.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.packaging',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\__init__.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.packaging.__about__',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\__about__.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.packaging.version',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\version.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.packaging._structures',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\_structures.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.pyparsing',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pkg_resources\\_vendor\\pyparsing.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.packaging.markers',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\markers.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.appdirs',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pkg_resources\\_vendor\\appdirs.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.packaging._compat',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\_compat.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.packaging.requirements',
-   'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\requirements.py',
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\specifiers.py',
    'PYMODULE'),
   ('pkg_resources._vendor',
    'c:\\users\\azhary '
    'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pkg_resources\\_vendor\\__init__.py',
    'PYMODULE'),
-  ('pkg_resources._vendor.packaging.specifiers',
+  ('pkg_resources._vendor.packaging.__about__',
    'c:\\users\\azhary '
-   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\specifiers.py',
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\__about__.py',
    'PYMODULE'),
   ('pkg_resources._vendor.six',
    'c:\\users\\azhary '
    'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pkg_resources\\_vendor\\six.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.pyparsing',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pkg_resources\\_vendor\\pyparsing.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging.requirements',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\requirements.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging._compat',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\_compat.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.appdirs',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pkg_resources\\_vendor\\appdirs.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging.utils',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\utils.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging.version',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\version.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging.markers',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\markers.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\__init__.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging._structures',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\_structures.py',
    'PYMODULE'),
   ('setuptools.unicode_utils',
    'c:\\users\\azhary '
@@ -8174,6 +8554,26 @@
   ('sklearn.neighbors',
    'c:\\users\\azhary '
    'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\sklearn\\neighbors\\__init__.py',
+   'PYMODULE'),
+  ('sklearn.neural_network',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\sklearn\\neural_network\\__init__.py',
+   'PYMODULE'),
+  ('sklearn.neural_network.multilayer_perceptron',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\sklearn\\neural_network\\multilayer_perceptron.py',
+   'PYMODULE'),
+  ('sklearn.neural_network._stochastic_optimizers',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\sklearn\\neural_network\\_stochastic_optimizers.py',
+   'PYMODULE'),
+  ('sklearn.neural_network._base',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\sklearn\\neural_network\\_base.py',
+   'PYMODULE'),
+  ('sklearn.neural_network.rbm',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\sklearn\\neural_network\\rbm.py',
    'PYMODULE'),
   ('sklearn.linear_model',
    'c:\\users\\azhary '
@@ -9066,6 +9466,58 @@
   ('pandas.io.html',
    'c:\\users\\azhary '
    'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\pandas\\io\\html.py',
+   'PYMODULE'),
+  ('bs4',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\bs4\\__init__.py',
+   'PYMODULE'),
+  ('bs4.element',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\bs4\\element.py',
+   'PYMODULE'),
+  ('soupsieve',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\soupsieve\\__init__.py',
+   'PYMODULE'),
+  ('soupsieve.css_parser',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\soupsieve\\css_parser.py',
+   'PYMODULE'),
+  ('soupsieve.css_match',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\soupsieve\\css_match.py',
+   'PYMODULE'),
+  ('soupsieve.css_types',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\soupsieve\\css_types.py',
+   'PYMODULE'),
+  ('soupsieve.util',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\soupsieve\\util.py',
+   'PYMODULE'),
+  ('soupsieve.__meta__',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\soupsieve\\__meta__.py',
+   'PYMODULE'),
+  ('bs4.dammit',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\bs4\\dammit.py',
+   'PYMODULE'),
+  ('bs4.builder',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\bs4\\builder\\__init__.py',
+   'PYMODULE'),
+  ('bs4.builder._lxml',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\bs4\\builder\\_lxml.py',
+   'PYMODULE'),
+  ('bs4.builder._html5lib',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\bs4\\builder\\_html5lib.py',
+   'PYMODULE'),
+  ('bs4.builder._htmlparser',
+   'c:\\users\\azhary '
+   'arliansyah\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\bs4\\builder\\_htmlparser.py',
    'PYMODULE'),
   ('pandas.util._print_versions',
    'c:\\users\\azhary '
