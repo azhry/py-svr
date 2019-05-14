@@ -300,10 +300,50 @@ class Ui_MainWindow(object):
             print(f"MAE: {mae}")
             print(f"RMSE: {rmse}\n")
 
+            from sklearn.neural_network import MLPRegressor
+            hidden = 5
+            reg = MLPRegressor(hidden_layer_sizes=(5, ), activation='logistic', solver='lbfgs', alpha=0.0001,random_state=0)
+            reg.fit(x, y)
+            ypredmlp = reg.predict(xtest)
+            scoremlp = reg.score(xtest, ytest)
+            msemlp = mean_squared_error(ytest, ypredmlp)
+            maemlp = mean_absolute_error(ytest, ypredmlp)
+            rmsemlp = sqrt(msemlp)
+            print("Neural Network - Backpropagation")
+            print(reg)
+            print(f"Input: {x.shape[1]}")
+            print(f"Hidden: {hidden}")
+            print(f"Output: {reg.n_outputs_}")
+            print(f"Score: {scoremlp}")
+            print(f"MSE: {msemlp}")
+            print(f"MAE: {maemlp}")
+            print(f"RMSE: {rmsemlp}\n")
+
+            item = QtWidgets.QTableWidgetItem()
+            self.tableWidget_2.setItem(0, 5, item)
+            item = self.tableWidget_2.item(0, 5)
+            item.setText(str(scoremlp))
+
+            item = QtWidgets.QTableWidgetItem()
+            self.tableWidget_2.setItem(1, 5, item)
+            item = self.tableWidget_2.item(1, 5)
+            item.setText(str(msemlp))
+
+            item = QtWidgets.QTableWidgetItem()
+            self.tableWidget_2.setItem(2, 5, item)
+            item = self.tableWidget_2.item(2, 5)
+            item.setText(str(maemlp))
+
+            item = QtWidgets.QTableWidgetItem()
+            self.tableWidget_2.setItem(3, 5, item)
+            item = self.tableWidget_2.item(3, 5)
+            item.setText(str(rmsemlp))
+
             f, ax = plt.subplots()
             actual = ax.plot(self.data['Time'].values, self.data['Data'].values, color='blue', label='Actual')
             ttest = dft['var1(t)'].values
-            predicted = ax.plot(ttest, ypred, color='red', label='Predicted')
+            predictedsvr = ax.plot(ttest, ypred, color='red', label='Predicted (SVR)')
+            predictedmlp = ax.plot(ttest, ypredmlp, color='green', label='Predicted (MLP)')
             ax.legend()
             plt.xlabel('Month')
             plt.ylabel('Number of License')
@@ -466,7 +506,7 @@ class Ui_MainWindow(object):
             item = self.tableWidget_2.item(3, 4)
             item.setText(str(rmse))
 
-            from sklearn.neural_network import MLPRegressor
+            
             # from sklearn.preprocessing import StandardScaler
 
             # scaler = StandardScaler()
@@ -474,43 +514,7 @@ class Ui_MainWindow(object):
             # x_scaled = scaler.transform(x)
             # xtest_scaled = scaler.transform(xtest)
 
-            hidden = 5
-            reg = MLPRegressor(hidden_layer_sizes=(5, ), activation='logistic', solver='lbfgs', alpha=0.0001,random_state=0)
-            reg.fit(x, y)
-            ypred = reg.predict(xtest)
-            score = reg.score(xtest, ytest)
-            mse = mean_squared_error(ytest, ypred)
-            mae = mean_absolute_error(ytest, ypred)
-            rmse = sqrt(mse)
-            print("Neural Network - Backpropagation")
-            print(reg)
-            print(f"Input: {x.shape[1]}")
-            print(f"Hidden: {hidden}")
-            print(f"Output: {reg.n_outputs_}")
-            print(f"Score: {score}")
-            print(f"MSE: {mse}")
-            print(f"MAE: {mae}")
-            print(f"RMSE: {rmse}\n")
-
-            item = QtWidgets.QTableWidgetItem()
-            self.tableWidget_2.setItem(0, 5, item)
-            item = self.tableWidget_2.item(0, 5)
-            item.setText(str(score))
-
-            item = QtWidgets.QTableWidgetItem()
-            self.tableWidget_2.setItem(1, 5, item)
-            item = self.tableWidget_2.item(1, 5)
-            item.setText(str(mse))
-
-            item = QtWidgets.QTableWidgetItem()
-            self.tableWidget_2.setItem(2, 5, item)
-            item = self.tableWidget_2.item(2, 5)
-            item.setText(str(mae))
-
-            item = QtWidgets.QTableWidgetItem()
-            self.tableWidget_2.setItem(3, 5, item)
-            item = self.tableWidget_2.item(3, 5)
-            item.setText(str(rmse))
+            
 
             
         else:
@@ -568,9 +572,16 @@ class Ui_MainWindow(object):
                 regressor.fit(x, y)
                 ypred = regressor.predict(forecast_data)
 
+                from sklearn.neural_network import MLPRegressor
+                hidden = 5
+                reg = MLPRegressor(hidden_layer_sizes=(5, ), activation='logistic', solver='lbfgs', alpha=0.0001,random_state=0)
+                reg.fit(x, y)
+                ypredmlp = reg.predict(forecast_data)
+
                 f, ax = plt.subplots()
                 actual = ax.plot(self.data['Time'].values, self.data['Data'].values, color='blue', label='Actual')
-                predicted = ax.plot(forecast_time, ypred, color='red', label='Forecast')
+                predicted = ax.plot(forecast_time, ypred, color='red', label='Forecast (SVR)')
+                predicted = ax.plot(forecast_time, ypredmlp, color='green', label='Forecast (SVR)')
                 plt.xlabel('Month')
                 plt.ylabel('Number of License')
                 ax.legend()
@@ -581,7 +592,7 @@ class Ui_MainWindow(object):
                 self.graphicsView.setPixmap(pic)
 
                 self.tableWidget.setRowCount(len(self.train) + len(self.test) + len(ypred))
-                for i, (time, predicted, sdm) in enumerate(zip(forecast_time, ypred, sdm_data)):
+                for i, (time, predicted, sdm, predictedmlp) in enumerate(zip(forecast_time, ypred, sdm_data, ypredmlp)):
                     item = QtWidgets.QTableWidgetItem()
                     self.tableWidget.setItem(i + total_records, 0, item)
                     item = self.tableWidget.item(i + total_records, 0)
@@ -590,7 +601,7 @@ class Ui_MainWindow(object):
                     item = QtWidgets.QTableWidgetItem()
                     self.tableWidget.setItem(i + total_records, 1, item)
                     item = self.tableWidget.item(i + total_records, 1)
-                    item.setText(str(int(predicted)))
+                    item.setText(f"{str(int(predicted))} (SVR), {str(int(predictedmlp))} (MLP)")
 
                     item = QtWidgets.QTableWidgetItem()
                     self.tableWidget.setItem(i + total_records, 2, item)
