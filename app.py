@@ -12,6 +12,7 @@ from pandas import DataFrame, concat
 from sklearn.metrics import mean_squared_error, mean_absolute_error
 from math import sqrt
 from datetime import datetime
+from sklearn.preprocessing import MinMaxScaler
 import pandas as pd, numpy as np, matplotlib.pyplot as plt
 
 # def series_to_supervised(data, n_in=1, n_out=1, dropnan=True):
@@ -213,7 +214,7 @@ class Ui_MainWindow(object):
         self.groupBox_3.setTitle(_translate("MainWindow", "Test Model"))
         self.pushButton.setText(_translate("MainWindow", "Do Test"))
         self.pushButton.clicked.connect(lambda: self.do_test(MainWindow))
-        self.label.setText(_translate("MainWindow", "Evaluates SVR by calculating score and error"))
+        self.label.setText(_translate("MainWindow", "Evaluates SVR and MLP by calculating score and error"))
         self.menuFile.setTitle(_translate("MainWindow", "File"))
         self.actionOpen_File.setText(_translate("MainWindow", "Open File"))
 
@@ -262,6 +263,8 @@ class Ui_MainWindow(object):
             plt.plot(self.data['Time'].values, self.data['Data'].values)
             plt.xlabel('Month')
             plt.ylabel('Number of License')
+            ax = plt.axes()
+            ax.set_ylim([0, 200])
             plt.savefig('Plot.png')
 
             pic = QtGui.QPixmap('Plot.png')
@@ -276,8 +279,17 @@ class Ui_MainWindow(object):
             train['Data2'] = list(self.train['Data2'].values)
             train['Data'] = list(self.train['Data'].values)
             df = series_to_supervised(train.values, steps)
+
+            xscaler = MinMaxScaler()
+            yscaler = MinMaxScaler()
+
             x = df.iloc[:, [a for a in range(steps * 2 - 2)]].values
+            print(x)
+            xscaled = xscaler.fit(x)
+
             y = df.iloc[:, [steps * 2 - 1]].values.ravel()
+            y2d = df.iloc[:, [steps * 2 - 1]].values
+            yscaled = yscaler.fit(y2d)
 
             test = DataFrame()
             test['Data2'] = list(self.test['Data2'].values)
@@ -288,11 +300,11 @@ class Ui_MainWindow(object):
             ytest = df.iloc[:, [steps * 2 - 1]].values.ravel()
 
             regressor = SVR(kernel='linear', epsilon=1.0)
-            regressor.fit(x, y)
-            ypred = regressor.predict(xtest)
-            score = regressor.score(xtest, ytest)
-            mse = mean_squared_error(ytest, ypred)
-            mae = mean_absolute_error(ytest, ypred)
+            regressor.fit(xscaler.transform(x), yscaler.transform(y.reshape(-1, 1)).ravel())
+            ypred = regressor.predict(xscaler.transform(xtest))
+            score = regressor.score(xscaler.transform(xtest), yscaler.transform(ytest.reshape(-1, 1)).ravel())
+            mse = mean_squared_error(ytest, yscaler.inverse_transform(ypred.reshape(-1, 1)).ravel())
+            mae = mean_absolute_error(ytest, yscaler.inverse_transform(ypred.reshape(-1, 1)).ravel())
             rmse = sqrt(mse)
             print("SVR Kernel Linear")
             print(f"Score: {score}")
@@ -342,11 +354,14 @@ class Ui_MainWindow(object):
             f, ax = plt.subplots()
             actual = ax.plot(self.data['Time'].values, self.data['Data'].values, color='blue', label='Actual')
             ttest = dft['var1(t)'].values
-            predictedsvr = ax.plot(ttest, ypred, color='red', label='Predicted (SVR)')
+            predictedsvr = ax.plot(ttest, yscaler.inverse_transform(ypred.reshape(-1, 1)).ravel(), color='red', label='Predicted (SVR)')
             predictedmlp = ax.plot(ttest, ypredmlp, color='green', label='Predicted (MLP)')
             ax.legend()
             plt.xlabel('Month')
             plt.ylabel('Number of License')
+
+            ax.set_ylim([0, 200])
+
             plt.savefig('Plot.png')
 
             pic = QtGui.QPixmap('Plot.png')
@@ -505,17 +520,6 @@ class Ui_MainWindow(object):
             self.tableWidget_2.setItem(3, 4, item)
             item = self.tableWidget_2.item(3, 4)
             item.setText(str(rmse))
-
-            
-            # from sklearn.preprocessing import StandardScaler
-
-            # scaler = StandardScaler()
-            # scaler.fit(x)
-            # x_scaled = scaler.transform(x)
-            # xtest_scaled = scaler.transform(xtest)
-
-            
-
             
         else:
             MainWindow.msg = QtWidgets.QMessageBox()
@@ -581,10 +585,11 @@ class Ui_MainWindow(object):
                 f, ax = plt.subplots()
                 actual = ax.plot(self.data['Time'].values, self.data['Data'].values, color='blue', label='Actual')
                 predicted = ax.plot(forecast_time, ypred, color='red', label='Forecast (SVR)')
-                predicted = ax.plot(forecast_time, ypredmlp, color='green', label='Forecast (SVR)')
+                predicted = ax.plot(forecast_time, ypredmlp, color='green', label='Forecast (MLP)')
                 plt.xlabel('Month')
                 plt.ylabel('Number of License')
                 ax.legend()
+                ax.set_ylim([0, 200])
                 plt.savefig('Plot.png')
 
                 pic = QtGui.QPixmap('Plot.png')
