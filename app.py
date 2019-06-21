@@ -7,9 +7,10 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+import sklearn.utils._cython_blas
 from sklearn.svm import SVR
 from pandas import DataFrame, concat
-from sklearn.metrics import mean_squared_error, mean_absolute_error
+from sklearn.metrics import mean_squared_error, mean_absolute_error, make_scorer
 from math import sqrt
 from datetime import datetime
 from sklearn.preprocessing import MinMaxScaler
@@ -272,6 +273,16 @@ class Ui_MainWindow(object):
             self.graphicsView.setPixmap(pic)
 
 
+    def mse(self, y_test, y_pred):
+        return np.sum((y_pred - y_test) ** 2)
+
+    def mae(self, y_test, y_pred):
+        return np.sum(np.abs((y_pred - y_test)) / len(y_test))
+
+    def rmse(self, y_test, y_pred):
+        return np.sqrt(self.mse(y_test, y_pred) / len(y_test))
+
+
     def do_test(self, MainWindow):
         if self.train is not None and self.test is not None:
             steps = 6
@@ -284,7 +295,6 @@ class Ui_MainWindow(object):
             yscaler = MinMaxScaler()
 
             x = df.iloc[:, [a for a in range(steps * 2 - 2)]].values
-            print(x)
             xscaled = xscaler.fit(x)
 
             y = df.iloc[:, [steps * 2 - 1]].values.ravel()
@@ -299,13 +309,16 @@ class Ui_MainWindow(object):
             xtest = df.iloc[:, [a for a in range(steps * 2 - 2)]].values
             ytest = df.iloc[:, [steps * 2 - 1]].values.ravel()
 
-            regressor = SVR(kernel='linear', epsilon=1.0)
+            regressor = SVR(kernel='linear', epsilon=1.0, verbose=True)
             regressor.fit(xscaler.transform(x), yscaler.transform(y.reshape(-1, 1)).ravel())
             ypred = regressor.predict(xscaler.transform(xtest))
             score = regressor.score(xscaler.transform(xtest), yscaler.transform(ytest.reshape(-1, 1)).ravel())
-            mse = mean_squared_error(ytest, yscaler.inverse_transform(ypred.reshape(-1, 1)).ravel())
-            mae = mean_absolute_error(ytest, yscaler.inverse_transform(ypred.reshape(-1, 1)).ravel())
-            rmse = sqrt(mse)
+            mse = self.mse(ytest, yscaler.inverse_transform(ypred.reshape(-1, 1)).ravel())
+            # mse = mean_squared_error(ytest, yscaler.inverse_transform(ypred.reshape(-1, 1)).ravel())
+            mae = self.mae(ytest, yscaler.inverse_transform(ypred.reshape(-1, 1)).ravel())
+            # mae = mean_absolute_error(ytest, yscaler.inverse_transform(ypred.reshape(-1, 1)).ravel())
+            rmse = self.rmse(ytest, yscaler.inverse_transform(ypred.reshape(-1, 1)).ravel())
+            # rmse = sqrt(mse)
             print("SVR Kernel Linear")
             print(f"Score: {score}")
             print(f"MSE: {mse}")
@@ -314,13 +327,16 @@ class Ui_MainWindow(object):
 
             from sklearn.neural_network import MLPRegressor
             hidden = 5
-            reg = MLPRegressor(hidden_layer_sizes=(5, ), activation='logistic', solver='lbfgs', alpha=0.0001,random_state=0)
+            reg = MLPRegressor(hidden_layer_sizes=(5, ), activation='logistic', solver='lbfgs', alpha=0.0001,random_state=0, verbose=True)
             reg.fit(x, y)
             ypredmlp = reg.predict(xtest)
             scoremlp = reg.score(xtest, ytest)
-            msemlp = mean_squared_error(ytest, ypredmlp)
-            maemlp = mean_absolute_error(ytest, ypredmlp)
-            rmsemlp = sqrt(msemlp)
+            msemlp = self.mse(ytest, ypredmlp)
+            # msemlp = mean_squared_error(ytest, ypredmlp)
+            maemlp = self.mae(ytest, ypredmlp)
+            # maemlp = mean_absolute_error(ytest, ypredmlp)
+            rmsemlp = self.rmse(ytest, ypredmlp)
+            # rmsemlp = sqrt(msemlp)
             print("Neural Network - Backpropagation")
             print(reg)
             print(f"Input: {x.shape[1]}")
@@ -392,9 +408,12 @@ class Ui_MainWindow(object):
             regressor.fit(x, y)
             ypred = regressor.predict(xtest)
             score = regressor.score(xtest, ytest)
-            mse = mean_squared_error(ytest, ypred)
-            mae = mean_absolute_error(ytest, ypred)
-            rmse = sqrt(mse)
+            mse = self.mse(ytest, ypred)
+            # mse = mean_squared_error(ytest, ypred)
+            mae = self.mae(ytest, ypred)
+            # mae = mean_absolute_error(ytest, ypred)
+            rmse = self.rmse(ytest, ypred)
+            # rmse = sqrt(mse)
             print("SVR Kernel RBF")
             print(f"Score: {score}")
             print(f"MSE: {mse}")
@@ -426,9 +445,12 @@ class Ui_MainWindow(object):
             reg.fit(x, y)
             ypred = reg.predict(xtest)
             score = reg.score(xtest, ytest)
-            mse = mean_squared_error(ytest, ypred)
-            mae = mean_absolute_error(ytest, ypred)
-            rmse = sqrt(mse)
+            mse = self.mse(ytest, ypred)
+            # mse = mean_squared_error(ytest, ypred)
+            mae = self.mae(ytest, ypred)
+            # mae = mean_absolute_error(ytest, ypred)
+            rmse = self.rmse(ytest, ypred)
+            # rmse = sqrt(mse)
             print("Linear Model - Lasso")
             print(f"Score: {score}")
             print(f"MSE: {mse}")
@@ -572,13 +594,13 @@ class Ui_MainWindow(object):
                     else:
                         start_month = start_month + 1
 
-                regressor = SVR(kernel='linear', epsilon=1.0)
+                regressor = SVR(kernel='linear', epsilon=1.0, verbose=True)
                 regressor.fit(x, y)
                 ypred = regressor.predict(forecast_data)
 
                 from sklearn.neural_network import MLPRegressor
                 hidden = 5
-                reg = MLPRegressor(hidden_layer_sizes=(5, ), activation='logistic', solver='lbfgs', alpha=0.0001,random_state=0)
+                reg = MLPRegressor(hidden_layer_sizes=(5, ), activation='logistic', solver='lbfgs', alpha=0.0001,random_state=0, verbose=True)
                 reg.fit(x, y)
                 ypredmlp = reg.predict(forecast_data)
 
